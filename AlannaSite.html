@@ -297,7 +297,6 @@
 </div>
 
 <form id="payment-form">
-  <span class="payment-errors"></span>
   <div>
     <img id="" src="{{societyimage}}">
     <a>{{paymentaccount}}</a>
@@ -343,6 +342,9 @@
     </label>
   </div>
 
+  {{#if errorMessage}}
+  <span class="payment-errors">{{errorMessage}}</span>
+  {{/if}}
   <button id="" type="submit">Buy Now</button>
 </form>
 </template>

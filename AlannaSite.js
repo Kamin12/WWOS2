@@ -155,6 +155,7 @@ if (Meteor.isClient) {
     this.mainimageconsole = new ReactiveVar('/images/squaddalean.jpg');
     this.leftarrow = new ReactiveVar('slideshowarrowone');
     this.rightarrow = new ReactiveVar('slideshowarrowtwo');
+    this.errorMessage = new ReactiveVar(null);
 
   });
 
@@ -218,7 +219,7 @@ if (Meteor.isClient) {
       $("#aboutcontainer").show();
       $("#mediacontainer").hide();
     },
-    'submit #payment-form': function(event) {
+    'submit #payment-form': function(event, template) {
       event.preventDefault();
 
       var cardDetails = {
@@ -240,7 +241,7 @@ if (Meteor.isClient) {
       if (pass) {
         Stripe.createToken(cardDetails, function(status, response) {
           if (response.error) {
-            alert(response.error.message);
+            template.errorMessage.set(response.error.message);
           } else {
             Meteor.call("chargeCard", response.id, function(err, response) {
               if (err) {
@@ -296,6 +297,9 @@ if (Meteor.isClient) {
     },
     deadmon: function() {
       return '/images/deadmonbernz.jpg';
+    },
+    errorMessage:function(){
+      return Template.instance().errorMessage.get();
     }
   });
 }
@@ -320,14 +324,3 @@ if (Meteor.isServer) {
     }
   });
 }
-
-
-
-/*
-Template.market.onRendered(function(e) {
-$("#images").animate({
-  margin-top: '12em'
-}, 2000 );
-});
-}
-*/

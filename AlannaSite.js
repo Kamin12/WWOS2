@@ -1,7 +1,7 @@
 if (Meteor.isClient) {
  Meteor.startup(function(){
-   Stripe.setPublishableKey(Meteor.settings.public.StripePub);
- })
+   Stripe.setPublishableKey(Meteor.settings.public.stripe);
+ });
 
 Template.market.helpers ({
   products: [
@@ -156,7 +156,7 @@ Template.StreamProduct1.events ({
           if (err){
             alert(err.messsage);
           } else {
-            alert("Success"+response);
+            alert("Success"+response.id);
           }
         })
       }
@@ -277,7 +277,7 @@ Template.StreamProduct2.helpers ({
 }
 
 if (Meteor.isServer) {
-var stripe = StripeAPI(Meteor.settings.StripePri);
+var stripe = StripeAPI(Meteor.settings.public.stripe);
 
 Meteor.methods({
   "chargeCard": function(cardToken){
@@ -294,7 +294,7 @@ Meteor.methods({
     }
     })
   }
-})
+});
 }
 
 

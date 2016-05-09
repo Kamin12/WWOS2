@@ -153,7 +153,6 @@ if (Meteor.isClient) {
     this.mainimageconsole = new ReactiveVar('/images/squaddalean.jpg');
     this.leftarrow = new ReactiveVar('slideshowarrowone');
     this.rightarrow = new ReactiveVar('slideshowarrowtwo');
-    this.errorMessage = new ReactiveVar(null);
 
   });
 
@@ -211,44 +210,6 @@ if (Meteor.isClient) {
     'click #abouttab' (event) {
       $("#aboutcontainer").show();
       $("#mediacontainer").hide();
-    },
-    'submit #payment-form': function(event, template) {
-      event.preventDefault();
-
-      var cardDetails = {
-          "number": event.target.cardNumber.value,
-          "cvc": event.target.cardCVC.value,
-          "exp_month": event.target.cardExpiryMM.value,
-          "exp_year": event.target.cardExpiryYY.value,
-        },
-        pass = true,
-        missingElement;
-
-      for (var key in cardDetails) {
-        if (!cardDetails[key]) {
-          pass = false;
-          missingElement = key;
-        }
-      }
-
-      if (pass) {
-        Stripe.createToken(cardDetails, function(status, response) {
-          if (response.error) {
-            template.errorMessage.set(response.error.message);
-          } else {
-            Meteor.call("chargeCard", response.id, function(err, response) {
-              if (err) {
-                alert(err.messsage);
-              } else {
-                alert("Success" + response.id);
-              }
-            })
-          }
-        });
-      } else {
-        alert(missingElement + ' Is missing');
-      }
-
     }
   });
 
@@ -290,9 +251,6 @@ if (Meteor.isClient) {
     },
     deadmon: function() {
       return '/images/deadmonbernz.jpg';
-    },
-    errorMessage:function(){
-      return Template.instance().errorMessage.get();
     }
   });
 }

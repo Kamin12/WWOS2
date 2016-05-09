@@ -136,9 +136,6 @@ if (Meteor.isClient) {
 
     'click #buybuttonnavigator' (event) {
       Blaze.render(Template.paymentModal, document.body);
-      $("#aboutcontainer").hide();
-      $("#mediacontainer").hide();
-      $('#payment-form').show();
     },
     'click #mediatab' (event) {
       $("#aboutcontainer").hide();
@@ -205,12 +202,6 @@ if (Meteor.isClient) {
     },
 
     'click #buybuttonnavigator' (event) {
-      $("#aboutcontainer").hide();
-      $("#mediacontainer").hide();
-      $('#mastermenu').hide();
-      $("#streamnavigatortwo").hide();
-      $("#streamnavigatorone").hide();
-      $("#payment-form").show();
       Blaze.render(Template.paymentModal, document.body);
     },
     'click #mediatab' (event) {

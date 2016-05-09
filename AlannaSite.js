@@ -135,6 +135,7 @@ if (Meteor.isClient) {
     },
 
     'click #buybuttonnavigator' (event) {
+      Blaze.render(Template.paymentModal, document.body);
       $("#aboutcontainer").hide();
       $("#mediacontainer").hide();
       $('#payment-form').show();
@@ -210,6 +211,7 @@ if (Meteor.isClient) {
       $("#streamnavigatortwo").hide();
       $("#streamnavigatorone").hide();
       $("#payment-form").show();
+      Blaze.render(Template.paymentModal, document.body);
     },
     'click #mediatab' (event) {
       $("#aboutcontainer").hide();

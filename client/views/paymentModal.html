@@ -1,0 +1,60 @@
+<template name="paymentModal">
+  <div class="modal">
+    <div class="modal-inner">
+      <a rel="modal:close">Close</a>
+      <div class="modal-content" id="paymentModal">
+        <form id="payment-form">
+          <div>
+            <img id="" src="{{societyimage}}">
+            <a>{{paymentaccount}}</a>
+            <a>{{productitle}}</a>
+            <div class="row">
+              <label>
+                <span class="paymenttext">Select a Size:</span>
+                <select name="sizes">
+                  <option value="small">SMALL</option>
+                  <option value="medium">MEDIUM</option>
+                  <option value="large">LARGE</option>
+                  <option value="extra-large">X-LARGE</option>
+                  <option value="two-extra-large">2X-LARGE</option>
+                  <option value="three-extra-large">3X-LARGE</option>
+                </select>
+              </label>
+            </div>
+          </div>
+
+          <div class="row">
+            <input data-stripe="number" id="cardnumber" name="cardNumber" placeholder="Card Number" type="text">
+            <input data-stripe="cvc" id="cardcvc" name="cardCVC" place-holder="CVC" type="text">
+          </div>
+
+          <div class="row">
+            <input data-stripe="exp-month" id="cardmonth" name="cardExpiryMM" placeholder="MM" type="text">
+            <input data-stripe="exp-year" id="cardyear" name="cardExpiryYY" placeholder="YYYY" type="text">
+          </div>
+
+          <p id="addresslabel">
+            Shipping Address
+          </p>
+
+          <div class="row">
+            <input data-stripe="cvc" id="streetaddress" placeholder="Street Address" type="text">
+            <input data-stripe="zip-code" id="zipcode" placeholder="Zip Code" type="text">
+          </div>
+
+          <div class="row">
+            <label>
+              <input data-stripe="cvc" id="city" placeholder="City" type="text">
+              <input data-stripe="cvc" id="state" placeholder="State" type="text">
+            </label>
+          </div>
+
+          {{#if errorMessage}}
+            <span class="payment-errors">{{errorMessage}}</span>
+          {{/if}}
+          <button id="" type="submit">Buy Now</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</template>

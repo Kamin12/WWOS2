@@ -147,7 +147,7 @@ if (Meteor.isClient) {
       $("#aboutcontainer").show();
       $("#mediacontainer").hide();
     },
-    'submit #payment-form': function(event) {
+    'click #payment-form': function(event) {
       event.preventDefault();
 
       var cardDetails = {
@@ -159,8 +159,8 @@ if (Meteor.isClient) {
         pass = true,
         missingElement;
 
-      for (var key in a) {
-        if (!a[key]) {
+      for (var key in cardDetails) {
+        if (!cardDetails[key]) {
           pass = false;
           missingElement = key;
         }

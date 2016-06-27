@@ -1,0 +1,17 @@
+{
+  "galaxy.meteor.com": {
+     "env": {
+       "ROOT_URL": "http://www.wreadwrkr.meteorapp.com",
+       "MONGO_URL": "mongodb://wwcontrol2:!Wread951WrkWrk1081!@ds023432.mlab.com:23432/wreaddata"
+     }
+   },
+  "public": {
+    "stripe": "pk_live_Y3cSwemqQB17pKhoClyzO5dd"
+  },
+  "private": {
+    "stripe": "sk_live_jYVBqaan4iJid7UN4cp2n5Dl"
+  },
+    "analyticsSettings": {
+     "Google Analytics" : {"trackingId": "UA-57621903-2"}
+   }
+  }

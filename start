@@ -1,1 +1,1 @@
-meteor --settings settings-development.json
+meteor --settings private/settings.json

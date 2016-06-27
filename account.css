@@ -1,0 +1,215 @@
+.master-navbartwo1 {
+    background-image: -webkit-gradient( linear, right bottom, left bottom, color-stop(0, #0B917F), color-stop(1, #34396E) );
+    background-image: -o-linear-gradient(left, #0B917F 0%, #34396E 100%);
+    background-image: -moz-linear-gradient(left, #0B917F 0%, #34396E 100%);
+    background-image: -webkit-linear-gradient(left, rgb(16, 62, 41) 30%, rgb(33, 53, 82) 100%);
+    background-image: -ms-linear-gradient(left, #0B917F 0%, #34396E 100%);
+    background-image: linear-gradient(to left, #002310 0% #061833 100%);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 500;
+    top: 0px;
+    right: 0px;
+}
+
+.master-navbarthree1 {
+  height: 100%;
+      top: 0px;
+      left: 0;
+      width: 100%;
+      z-index: 550;
+      position: fixed;
+      opacity: .95;
+      background-color: rgba(255, 255, 255, 0.71);
+}
+
+#login-buttons {
+    display: inline-block;
+    margin-right: 0.2px;
+    line-height: 1;
+    margin-top: 10em;
+    position: fixed;
+    z-index: 100000000000000000000000000000;
+}
+
+#creatordescription {
+  font-family: "San Francisco Text";
+  font-weight: 600;
+  color: black;
+  display: block;
+  margin-left: 10%;
+  width: 75%;
+  margin-top: 22em;
+  z-index: 100000000000000000000000000000000;
+  position: fixed;
+  letter-spacing: .3em;
+  border-left: 3px dashed #FFFFFF;
+  padding-left: 3%;
+}
+
+  #creatornetwork {
+    font-family: "San Francisco Text";
+    color: black;
+    z-index: 100000000000;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .5em;
+    margin-top: 10em;
+    display: block;
+    margin-left: 10%;
+    padding-bottom: 1em;
+    border-bottom: 3px dashed rgb(255, 255, 255);
+    position: fixed;
+}
+
+
+
+
+
+
+.maintext2{
+  display: inline-block;
+      text-align: center;
+      z-index: 1001;
+      -webkit-transition: all 150ms ease;
+      -moz-transition: all 150ms ease;
+      -o-transition: all 150ms ease;
+      transition: all 150ms ease;
+      color: #716969;
+      font-family: "San Francisco Text";
+      padding-right: 1.7em;
+      padding-left: .3em;
+      color: rgb(255, 255, 255);
+      border-bottom: none;
+      border-top: none;
+      letter-spacing: 2px;
+      font-weight: 600;
+      font-size: .8em;
+      border-right: none;
+      border-left: none;
+      text-decoration: none;
+      margin-top: 3.4em;
+}
+
+#joingemail {
+  background-color: rgba(0, 0, 0, 0.5);
+border: none;
+width: 60%;
+height: 5em;
+border-radius: 5px;
+padding-left: 5em;
+font-size: 1.2em;
+letter-spacing: .4em;
+text-transform: uppercase;
+color:white;
+}
+
+#launchtag {
+  z-index: 100000000000000000000000;
+  display: block;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  top: 6em;
+  background-image: -webkit-linear-gradient(left, rgb(187, 187, 187) 30%, rgb(109, 109, 109) 100%);
+}
+
+#signupform {
+  width: 80%;
+      display: block;
+      z-index: 1000000000000000000000000;
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 8em;
+}
+
+
+#joingemail:hover {
+background-color: rgba(0, 0, 0, 0.5);
+border: 1px solid turquoise;
+width: 60%;
+height: 5em;
+border-radius: 5px;
+padding-left: 5em;
+font-size: 1.2em;
+letter-spacing: .4em;
+text-transform: uppercase;
+}
+
+#sizes {
+margin-bottom: 1em;
+display: block;
+}
+
+#signup{
+height: 5em;
+    font-size: 1.2em;
+    border: 1px solid white;
+    color: rgb(255, 255, 255);
+    letter-spacing: .4em;
+    font-family: "San Francisco Text";
+    padding-left: 1.8em;
+    padding-right: 1.8em;
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+#signup:hover{
+  height: 5em;
+  font-size: 1.2em;
+  border: 1px solid white;
+  color: rgb(255, 255, 255);
+  letter-spacing: .4em;
+  font-family: "San Francisco Text";
+  padding-left: 1.8em;
+  padding-right: 1.8em;
+  background-color: rgba(255, 255, 255, 0.18);
+  border-radius: 5px;
+}
+
+#successmessage {
+position: fixed;
+color: white;
+font-family: "San Francisco Text";
+margin-top: 5em;
+display: block;
+z-index: 100000000000000000000000000000;
+}
+
+.modal2 {
+  display: block;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-image: background-image: -webkit-gradient( linear, right bottom, left bottom, color-stop(0, #0B917F), color-stop(1, #34396E) );
+  background-image: -o-linear-gradient(left, #0B917F 0%, #34396E 100%);
+  background-image: -moz-linear-gradient(left, #0B917F 0%, #34396E 100%);
+  background-image: -webkit-linear-gradient(left, rgb(253, 254, 255) 30%, rgb(255, 255, 246) 100%);
+  background-image: -ms-linear-gradient(left, #0B917F 0%, #34396E 100%);
+  background-image: linear-gradient(to left, #002310 0% #061833 100%);
+  z-index: 10000000000000;
+}
+
+.modal3 {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-image: background-image: -webkit-gradient( linear, right bottom, left bottom, color-stop(0, #0B917F), color-stop(1, #34396E) );
+  background-image: -o-linear-gradient(left, #0B917F 0%, #34396E 100%);
+  background-image: -moz-linear-gradient(left, #0B917F 0%, #34396E 100%);
+  background-image: -webkit-linear-gradient(left, rgb(186, 203, 210) 30%, rgb(156, 173, 160) 100%);
+  background-image: -ms-linear-gradient(left, #0B917F 0%, #34396E 100%);
+  background-image: linear-gradient(to left, #002310 0% #061833 100%);
+  z-index: 10000000000000;
+}

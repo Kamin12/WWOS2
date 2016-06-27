@@ -3,15 +3,15 @@
     <!-- Modal content -->
     <div class="modal-content">
       <span class="close">x</span>
-      <form id="payment-form">
-        <div>
-          <img id="" src="{{societyimage}}">
-          <a>{{paymentaccount}}</a>
-          <a>{{productitle}}</a>
+          <form id="payment-form">
           <div class="row">
-            <label>
-              <span class="paymenttext">Select a Size:</span>
-              <select name="sizes">
+            <label id="sizes">
+              <a value="{{item}}" name="listingfam" >Selection: {{item}}</a>
+              <br>
+              <span  class="paymenttext">Select a Size:</span>
+                <div id="sizecreate">
+              <select name="sizes" id="selectsizes" required>
+                <option placeholder="Select"></option>
                 <option value="small">SMALL</option>
                 <option value="medium">MEDIUM</option>
                 <option value="large">LARGE</option>
@@ -19,18 +19,26 @@
                 <option value="two-extra-large">2X-LARGE</option>
                 <option value="three-extra-large">3X-LARGE</option>
               </select>
+            </div>
             </label>
           </div>
+
+<div class="row">
+  <input  name="fullnameone" id="fullnameone" placeholder="Full Name" type="text">
+  <input name="email" id="e-mail" placeholder="E-Mail" type="text">
+</div>
+    <div class="row">
+      <input data-stripe="name" id="fullname" placeholder="Confirm Full Name" type="text">
+      <input data-stripe="email" id="e-mail" placeholder="Confirm E-Mail" type="text">
+    </div>
+        <div class="row">
+          <input data-stripe="number" id="cardnumber" placeholder="Card Number" type="text">
+          <input data-stripe="cvc" id="cardcvc" placeholder="CVC" type="text">
         </div>
 
         <div class="row">
-          <input data-stripe="number" id="cardnumber" name="cardNumber" placeholder="Card Number" type="text">
-          <input data-stripe="cvc" id="cardcvc" name="cardCVC" place-holder="CVC" type="text">
-        </div>
-
-        <div class="row">
-          <input data-stripe="exp-month" id="cardmonth" name="cardExpiryMM" placeholder="MM" type="text">
-          <input data-stripe="exp-year" id="cardyear" name="cardExpiryYY" placeholder="YYYY" type="text">
+          <input data-stripe="exp_month" id="cardmonth" placeholder="MM" type="text">
+          <input data-stripe="exp_year" id="cardyear"  placeholder="YYYY" type="text">
         </div>
 
         <p id="addresslabel">
@@ -38,22 +46,42 @@
         </p>
 
         <div class="row">
-          <input data-stripe="cvc" id="streetaddress" placeholder="Street Address" type="text">
-          <input data-stripe="zip-code" id="zipcode" placeholder="Zip Code" type="text">
+          <input data-stripe="address_line1" id="streetaddress1" placeholder="Street Address 1" type="text">
         </div>
 
         <div class="row">
           <label>
-            <input data-stripe="cvc" id="city" placeholder="City" type="text">
-            <input data-stripe="cvc" id="state" placeholder="State" type="text">
+            <input data-stripe="address_city" id="city" placeholder="City" type="text">
+            <input data-stripe="address_state" id="state" placeholder="State" type="text">
+            <input data-stripe="address_zip" id="zipcode" placeholder="Zip Code" type="text">
           </label>
         </div>
-
+<br>
+        <div class="row" style="margin-top: .8em;">
+          <a id="ordertotaling2"> TOTAL: 38.00 </a>
+        </div>
+        <button href="" id="paymentz" type="submit">Buy Now</button>
+          </form>
         {{#if errorMessage}}
-          <span class="payment-errors">{{errorMessage}}</span>
+          <div class="payment-errors">{{errorMessage}}</div>
         {{/if}}
-        <button id="" type="submit">Buy Now</button>
-      </form>
+        {{#if errormessageorder}}
+        <div class="payment-errors">{{errormessageorder}}</div>
+
+        {{/if}}
+      </div>
     </div>
-  </div>
+
+{{#if successful}}
+<div id="successful">
+<a id="successmain">
+SUCCESS!
+</a>
+<a id="successmessage">
+Congratulations. Your purchase was succcessful and is being processed.
+<br>
+To check the status of your purchase, contact Society @ societycontrolled@gmail.com .
+</a>
+</div>
+{{/if}}
 </template>

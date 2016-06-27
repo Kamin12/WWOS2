@@ -1,20 +1,20 @@
-if (Meteor.isClient) {
-/*
-Meteor.methods({
-  processPayment (charge) {
-    check( charge, {
-      amount: Number,
-      currency: String,
-      source: String,
-      description: String,
-      receipt_email: String
-    });
+if (Meteor.isServer) {
+  var Stripe = StripeAPI(Meteor.settings.private.stripe);
 
-    let handleCharge = Meteor.wrapAsync( Stripe.charges.create, Stripe.charges ),
-        payment      = handleCharge( charge );
-
-    return payment;
-  }
+  Meteor.methods({
+    "chargeCard": function(stripeToken) {
+      Stripe.charges.create({
+        amount: 3800,
+        currency: "usd",
+        source: stripeToken
+      }, function(err, charge) {
+        console.log(err, charge);
+      });
+},
+   "addCustomerData": function(memberDetails) {
+     Orders.insert({
+     memberDetails
+   });
+   }
 });
-*/
 }

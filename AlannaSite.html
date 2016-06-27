@@ -105,9 +105,11 @@
         <a class="maintext" href="/account">JOIN</a>
       </li>
     </nav>
+    <a id="create">Create + </a>
   </div>
   <div class="master-navbartwo"></div>
-  <div class="master-navbarthree"></div>
+  <div class="master-navbarthree">
+  </div>
 </div>
 </template>
 
@@ -295,4 +297,81 @@
     DETAILS
   </a>
 </div>
+</template>
+
+
+
+<template name ="Create">
+  <div class="modal2" id="myModal">
+  <div class="modal-content">
+<a id="ProductSelection"> Select a Medium </a>
+
+<a id="ProductSelection2"> Product  </a>
+
+<div id="creatorproduct"> {{>CreateProduct}} </div>
+</div>
+</div>
+</template>
+
+
+<template name="CreateProduct">
+
+  <nav id="productcreate">
+  <li id="fone"> 1 </li>
+  <li id="ftwo"> 2 </li>
+  <li id="fthree"> 3 </li>
+</nav>
+
+    <form class="addProduct" enctype="multipart/form-data" method="post" action="">
+
+        <div id="prodimages">
+        <input class="file fileInput" id="productImg" type="file" name="productImg" accept=".jpg" /><br/>
+        {{#with productImg}}
+          <input hidden name="imageURL" value={{this.url}}/>
+        {{/with}}
+        <!--<input type="hidden" name="thumbURL" value={{this.url  store='thumb'}}/>-->
+       </div>
+
+
+      <fieldset id="basics">
+        Title: <input type="text" name="title" placeholder="Product Title" id="productTitle" class="title"/><br/>
+        Quantity: <input id="productqty" type="text" name="quantity" placeholder="0"/><br/>
+        Description: <input id="productdescription" type="text" name="description" placeholder="Describe Your Product"/><br/>
+        <input id="active" type="radio" name="status" value="active"><b>Active</b>: Displays product in store<br/>
+        <input id="private" type="radio" name="status" value="hidden"><b>Hidden</b>: Does <i>not</i> display the product in store<br/>
+      </fieldset>
+      <br/>
+
+
+
+
+
+
+      <!--Category: <input type="text" name="category"/>-->
+
+
+
+      <fieldset id="monetize">
+        <legend >Pricing</legend>
+        Price: $<input type="text" name="price" placeholder="0.00"/><br/>
+        Sale Price: $<input type="text" name="salePrice" placeholder="0.00"/><br/>
+      <br/>
+        <p>Shipping</p>
+            Price: $ <input type="text" id="shipment-option-cost" class="form-control" name="cost" placeholder="Shipment Option Cost" />
+            Days Until Shipped: $ <input type="text" id="shipment-option-time" class="form-control" name="time" placeholder="Shipment Option Delivery Time in Days" />
+      </fieldset>
+
+      <br/>
+
+
+
+
+
+
+    <div id="lowerlowernav">
+  <a id="{{back}}" class="formback"> BACK </a> <a id="{{next}}" class="formnext"> NEXT </a>
+    </div>
+      <input id="shareproduct" type="submit" value="Confirm"/><br/>
+    </form>
+
 </template>

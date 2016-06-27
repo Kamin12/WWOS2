@@ -1,4 +1,7 @@
+Orders = new Mongo.Collection('orders');
+
 if (Meteor.isClient) {
+
   Meteor.startup(function() {
     Stripe.setPublishableKey(Meteor.settings.public.stripe);
   });
@@ -6,93 +9,130 @@ if (Meteor.isClient) {
   Template.market.helpers({
     products: [{
       image: '/images/squaddalean.jpg',
-      Title: "Bernie by BERNZ!",
+      Title: "Bernie by BERNZ! Tee",
       Price: '$ 30',
       Account: "Society",
       id: 'berniebybernz'
     }, {
       image: '/images/selectionfourfinal.jpg',
-      Title: "Bernie for Society",
+      Title: "Bernie for Society Tee",
       Price: '$ 30',
       Account: 'Society',
       id: 'societyforbernie'
     }]
   });
 
-  /*
+  Template.join2.onRendered(function() {
+    Meteor.setTimeout(() => {
+      var modal2 = $('.modal2');
+      modal2.css('display', 'block');
+    }, 500);
+  });
+
+  Template.Create.onRendered(function() {
+    Meteor.setTimeout(() => {
+      var modal2 = $('.modal3');
+      modal2.css('display', 'block');
+    }, 500);
+  });
+
+
+
+
+  Template.menu.events({
+    'click #mainiconsthree' (event) {
+      Blaze.render(Template.join2, document.body);
+    },
+    'click #create' (event) {
+      Blaze.render(Template.Create, document.body);
+    }
+  });
+
+Template.Create.helpers({
+  back: function(){
+    return Template.instance().formback.get();
+  },
+  next: function (){
+    return Template.instance().formnext.get();
+  }
+});
+
+
+Template.Create.onRendered(function CreatingisCreation(){
+  this.formnext = new ReactiveVar('fone');
+  this.formback = new ReactiveVar('fone');
+  $('#creatorproduct').hide();
+});
+
+Template.Create.events({
+  'click #ProductSelection2' (event) {
+    $('#ProductSelection2').attr('id','ProductSelection3');
+    $('#ProductSelection').hide();
+    $('#creatorproduct').show();
+    $('#basics').hide()
+    $('#monetize').hide()
+    $('#shareproduct').hide();
+  },
+  'click #fone' (event) {
+    $('#prodimages').show();
+    $('#basics').hide();
+    $('#monetize').hide();
+    $('#shareproduct').hide();
+    $('#formnext').show();
+    Template.instance().formback.set('ProductSelection2');
+    Template.instance().formnext.set('ftwo');
+  },
+  'click #ftwo' (event) {
+    $('#basics').show();
+    $('#monetize').hide();
+    $('#prodimages').hide();
+    $('#shareproduct').hide();
+    $('#formnext').show();
+    Template.instance().formback.set('fone');
+    Template.instance().formnext.set('fthree');
+
+  },
+  'click #fthree' (event) {
+    $('#prodimages').hide();
+    $('#basics').hide();
+    $('#monetize').show();
+    $('#shareproduct').show();
+    $('#formnext').hide();
+    $('#shareproduct').show();
+    Template.instance().formback.set('ftwo');
+
+  }
+});
+
+  Template.Product.onCreated( function CreateTokenHandlerOnCreated() {
+/*
+  var template = Template.instance();
+  template.selectedChoice  = new ReactiveVar( false );
+  */
+  });
+
+
   Template.Product.events ({
-    'click #buydarkfeed' (event, template) {
+    /*
+    'click .buydarkfeed' (event, template) {
 
-      var shirts = {
-            'Westside': {
-              amount: 30.00,
-              description: "Full Torso Apparition Removal"
-            },
-            'Rightside': {
-              amount: 30.00,
-              description: "Free-Floating Repeater Removal"
-            }
-          };
+     var order = event.target.dataset.choice;
+     Session.set('piece', 'order');
 
-    var choice = shirts[ event.target.dataset.choice];
-
-    template.selectedChoice.set( choice );
-    template.processing.set( true );
-
-           template.checkout.open({
-           name: 'Society',
-           description: choice.description,
-           amount: 30.00,
-           sizes: 'S,M,L,XL,2XL,3XL'
-         });
+     Blaze.render(Template.paymentModal, document.body);
+  },
+  */
+  'click .berniebybernz' (event,template) {
+    Blaze.render(Template.paymentModal, document.body);
+    Session.set('selectedItem', 'Bernie by BERNZ! Tee');
+  },
+  'click .societyforbernie' (event, template) {
+    Blaze.render(Template.paymentModal, document.body);
+      Session.set('selectedItem', 'Bernie for Society Tee');
   }
   });
-  */
-  /*
-  Template.Product.onCreated( function CreateTokenHandlerOnCreated() {
-  var template = Template.instance();
 
-  template.selectedChoice  = new ReactiveVar( false );
-  template.processing = new ReactiveVar( false );
 
-  template.checkout = StripeCheckout.configure({
-      key: Meteor.settings.public.stripe,
-      image: 'https://tmc-post-content.s3.amazonaws.com/ghostbusters-logo.png',
-      locale: 'auto',
-      token ( token ) {
-        let choice = template.selectedChoice.get(),
-        charge  = {
-        amount: token.amount || choice.amount,
-        currency: token.currency || 'usd',
-        source: token.id,
-        description: token.description || choice.description,
-        receipt_email: token.email
-        };
-
-  Meteor.call( 'processPayment', charge, function ( error, response )  {
-          if ( error ) {
-            template.processing.set( false );
-            Bert.alert( error.reason, 'danger' );
-          } else {
-            Bert.alert( 'Congratulations.', 'success' );
-          }
-        });
-      },
-      closed () {
-       template.processing.set( false );
-    }
-    });
-  });
-  */
-
-  Template.Product.helpers({
-    processing: function() {
-      return Template.instance().processing.get();
-    },
-    societyimage: function() {
-      return '/images/societylogo.jpg';
-    }
-  });
 
   Template.StreamProduct1.onCreated(function StreamProductOnCreated() {
     this.mainimageconsole = new ReactiveVar('/images/selectionfourfinal.jpg');
@@ -109,7 +149,7 @@ if (Meteor.isClient) {
       Template.instance().rightarrow.set('slideshowarrowsix');
     },
     'click .slideshowarrowtwo' (event) {
-      Template.instance().mainimageconsole.set('images/selectionthree.JPG');
+      Template.instance().mainimageconsole.set('images/SOCIETYIMAGE.jpg');
       Template.instance().leftarrow.set('slideshowarrowthree');
       Template.instance().rightarrow.set('slideshowarrowfour');
     },
@@ -124,7 +164,7 @@ if (Meteor.isClient) {
       Template.instance().rightarrow.set('slideshowarrowsix');
     },
     'click .slideshowarrowfive' (event) {
-      Template.instance().mainimageconsole.set('images/selectionthree.JPG');
+      Template.instance().mainimageconsole.set('images/SOCIETYIMAGE.jpg');
       Template.instance().leftarrow.set('slideshowarrowthree');
       Template.instance().rightarrow.set('slideshowarrowfour');
     },
@@ -133,8 +173,12 @@ if (Meteor.isClient) {
       Template.instance().leftarrow.set('slideshowarrowone');
       Template.instance().rightarrow.set('slideshowarrowtwo');
     },
-
-    'click #buybuttonnavigator' (event) {
+    'click #buybuttonnavigatorbern' (event) {
+      Session.set('selectedItem', 'Bernie by BERNZ! Tee');
+      Blaze.render(Template.paymentModal, document.body);
+    },
+    'click #buybuttonnavigatorfor' (event) {
+      Session.set('selectedItem', 'Bernie for Society Tee');
       Blaze.render(Template.paymentModal, document.body);
     },
     'click #mediatab' (event) {
@@ -175,7 +219,7 @@ if (Meteor.isClient) {
       Template.instance().rightarrow.set('slideshowarrowsix');
     },
     'click .slideshowarrowtwo' (event) {
-      Template.instance().mainimageconsole.set('images/squadda3.JPG');
+      Template.instance().mainimageconsole.set('/images/SOCIETYIMAGE.jpg');
       Template.instance().leftarrow.set('slideshowarrowthree');
       Template.instance().rightarrow.set('slideshowarrowfour');
     },
@@ -190,7 +234,7 @@ if (Meteor.isClient) {
       Template.instance().rightarrow.set('slideshowarrowsix');
     },
     'click .slideshowarrowfive' (event) {
-      Template.instance().mainimageconsole.set('images/squadda3.JPG');
+      Template.instance().mainimageconsole.set('images/SOCIETYIMAGE.jpg');
       Template.instance().leftarrow.set('slideshowarrowthree');
       Template.instance().rightarrow.set('slideshowarrowfour');
     },
@@ -199,8 +243,12 @@ if (Meteor.isClient) {
       Template.instance().leftarrow.set('slideshowarrowone');
       Template.instance().rightarrow.set('slideshowarrowtwo');
     },
-
-    'click #buybuttonnavigator' (event) {
+    'click #buybuttonnavigatorbern' (event) {
+      Session.set('selectedItem', 'Bernie by BERNZ! Tee');
+      Blaze.render(Template.paymentModal, document.body);
+    },
+    'click #buybuttonnavigatorfor' (event) {
+      Session.set('selectedItem', 'Bernie for Society Tee');
       Blaze.render(Template.paymentModal, document.body);
     },
     'click #mediatab' (event) {
@@ -253,25 +301,9 @@ if (Meteor.isClient) {
       return '/images/deadmonbernz.jpg';
     }
   });
-}
 
-if (Meteor.isServer) {
-  var stripe = StripeAPI(Meteor.settings.public.stripe);
 
-  Meteor.methods({
-    "chargeCard": function(cardToken) {
-      stripe.charges.create({
-        amount: 3000,
-        currency: "usd",
-        source: cardToken
-      }, function(err, response) {
-        if (err) {
-          throw new Meteor.error(500, "stripe-error", err.message);
-        } else {
-          console.log(response);
-          return response;
-        }
-      })
-    }
-  });
+
+
+
 }

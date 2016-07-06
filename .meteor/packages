@@ -22,8 +22,9 @@ kadira:blaze-layout
 reactive-var
 mrgalaxy:stripe
 okgrow:analytics
-accounts-ui
 accounts-password
 useraccounts:core
 aldeed:template-extension
 useraccounts:unstyled
+accounts-facebook
+useraccounts:flow-routing

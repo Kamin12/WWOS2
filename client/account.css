@@ -178,6 +178,13 @@ display: block;
 z-index: 100000000000000000000000000000;
 }
 
+#idsent {
+  background-color: rgba(66, 66, 66, 0.31);
+padding-bottom: .4em;
+padding-top: .4em;
+margin-left: 40em;
+}
+
 .modal2 {
   display: block;
   position: fixed;

@@ -1,4 +1,8 @@
 Orders = new Mongo.Collection('orders');
+Products = new Mongo.Collection('products');
+Projects = new Mongo.Collection('projects');
+chatCollection = new Meteor.Collection(null);
+
 
 if (Meteor.isClient) {
 
@@ -36,6 +40,13 @@ if (Meteor.isClient) {
     }, 500);
   });
 
+  Template.MyMessages.onRendered(function() {
+    Meteor.setTimeout(() => {
+      var modal2 = $('.modal3');
+      modal2.css('display', 'block');
+    }, 500);
+  });
+
 
 
 
@@ -45,6 +56,9 @@ if (Meteor.isClient) {
     },
     'click #create' (event) {
       Blaze.render(Template.Create, document.body);
+    },
+    'click #messagingicon' (event) {
+      Blaze.render(Template.MyMessages, document.body);
     }
   });
 
@@ -61,7 +75,9 @@ Template.Create.helpers({
 Template.Create.onRendered(function CreatingisCreation(){
   this.formnext = new ReactiveVar('fone');
   this.formback = new ReactiveVar('fone');
+  this.errormessageorder1 = new ReactiveVar('null');
   $('#creatorproduct').hide();
+  $('#creatorproject').hide();
 });
 
 Template.Create.events({
@@ -72,6 +88,14 @@ Template.Create.events({
     $('#basics').hide()
     $('#monetize').hide()
     $('#shareproduct').hide();
+  },
+  'click #ProjectSelection2' (event){
+    $('#ProjectSelection2').attr('id','ProjectSelection3');
+    $('#ProductSelection').hide();
+    $('#creatorproject').show();
+    $('#basics').hide()
+    $('#monetize').hide()
+    $('#shareproject').hide();
   },
   'click #fone' (event) {
     $('#prodimages').show();
@@ -100,7 +124,86 @@ Template.Create.events({
     $('#formnext').hide();
     $('#shareproduct').show();
     Template.instance().formback.set('ftwo');
+  },
 
+'click #gone' (event) {
+  $('#prodimages').show();
+  $('#basics').hide();
+  $('#monetize').hide();
+  $('#shareproduct').hide();
+  $('#formnext').show();
+  Template.instance().formback.set('ProductSelection2');
+  Template.instance().formnext.set('ftwo');
+},
+'click #gtwo' (event) {
+  $('#basics').show();
+  $('#monetize').hide();
+  $('#prodimages').hide();
+  $('#shareproduct').hide();
+  $('#formnext').show();
+  Template.instance().formback.set('fone');
+  Template.instance().formnext.set('fthree');
+},
+'click #gthree' (event) {
+  $('#prodimages').hide();
+  $('#basics').hide();
+  $('#monetize').show();
+  $('#shareproduct').show();
+  $('#formnext').hide();
+  $('#shareproduct').show();
+  Template.instance().formback.set('ftwo');
+},
+'click #youuu' (event) {
+  $('click #youmenu').show();
+},
+'submit .addProject' (event, template){
+  event.preventDefault();
+
+  var projectDetails = {
+  "Images": event.target.imagesv.value,
+  "Title": event.target.titlev.value,
+  "createdAt": new Date,
+  "Description": event.target.descriptionv.value,
+}
+for (var key in productDetails) {
+  if (!productDetails[key]) {
+    pass = false;
+    missingElement = key;
+    Template.instance().errormessageorder1.set('Error: Please Enter'+ missingElement + '!!');
+  }
+}
+if (pass){
+  Meteor.call('addProduct', productDetails);
+  console.log('ham');
+}
+},
+  'submit .addProduct' (event, template) {
+    event.preventDefault();
+
+    var productDetails = {
+      "Images": event.target.imagesv.value,
+      "Title": event.target.titlev.value,
+      "Quantity": event.target.quantityv.value,
+      "Description": event.target.descriptionv.value,
+      "Price": event.target.pricev.value,
+      "ShipPrice": event.target.shippricev.value,
+      "ShipTime": event.target.shiptimev.value,
+      "createdAt": new Date,
+    },
+    pass = true,
+    missingElement;
+
+    for (var key in productDetails) {
+      if (!productDetails[key]) {
+        pass = false;
+        missingElement = key;
+        Template.instance().errormessageorder1.set('Error: Please Enter'+ missingElement + '!!');
+      }
+    }
+    if (pass){
+      Meteor.call('addProduct', productDetails);
+      console.log('ham');
+    }
   }
 });
 
@@ -302,8 +405,56 @@ Template.Create.events({
     }
   });
 
+  Template.ProductCloud.helpers({
+    products: function(){
+      return Products.find({})
+    }
+  });
 
+  Template.ProductWebsite.helpers({
+    products: function(){
+      return  Products.find({})
+    },
 
+  });
 
+Template.YourOrders.helpers({
+  yourorders: function(){
+    return Orders.find();
+  }
+});
+
+Template.MyMessages.events({
+  "click #send": function() {
+     var message = $('#chat-message').val();
+     chatCollection.insert({
+       username: 'me',
+       message: message
+     });
+     chatStream.emit('chat', message);
+      $('#chat-message').val('');
+   },
+   "chat":function(message,username){
+     chatCollection.insert({
+       username: username,
+       subscriptionId: this.subscriptionId,
+       message: message
+     });
+   }
+});
+
+var subscribedUsers = {};
+
+Template.MyMessages.helpers({
+  "user": function() {
+    return (this.username)? this.username: this.subscriptionId;
+  },
+  "messagesreceived": function(){
+    return chatCollection.find({});
+  },
+  "messagessent": function(){
+    return chatCollection.find({});
+  }
+});
 
 }

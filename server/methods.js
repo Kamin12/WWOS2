@@ -15,6 +15,12 @@ if (Meteor.isServer) {
      Orders.insert({
      memberDetails
    });
-   }
+ },
+ "addProduct": function (productDetails){
+   Products.insert({
+     productDetails
+   });
+   console.log('ham');
+ }
 });
 }

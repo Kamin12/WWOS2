@@ -22,9 +22,12 @@ kadira:blaze-layout
 reactive-var
 mrgalaxy:stripe
 okgrow:analytics
-accounts-password
 useraccounts:core
 aldeed:template-extension
-useraccounts:unstyled
 accounts-facebook
+arillo:flow-router-helpers
+accounts-password
+useraccounts:unstyled
 useraccounts:flow-routing
+insecure
+zimme:active-route

@@ -284,14 +284,15 @@
 
 
 
-<template name ="register">
-<label> </label>
-<input id="userimage" type="file">
+<template name="Register">
+<a id="UserId">{{ currentUser.username }}</a>
+<form name="userregisterform">
+<input id="userimage" type="file" name="userimageone">
 
-<label> </label>
-<input id="enterlocation" type="text">
+<input id="enterlocation" type="text" name="userlocationone">
 
-<input id="enterbio" type="text">
-
+<input id="enterbio" type="text" name="userbioone">>
+<button type="submit"> FINISH </button>
+</form>
 
 </template>

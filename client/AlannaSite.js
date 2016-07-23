@@ -1,7 +1,6 @@
 Orders = new Mongo.Collection('orders');
 Products = new Mongo.Collection('products');
 Projects = new Mongo.Collection('projects');
-chatCollection = new Meteor.Collection(null);
 
 
 if (Meteor.isClient) {
@@ -42,8 +41,8 @@ if (Meteor.isClient) {
 
   Template.MyMessages.onRendered(function() {
     Meteor.setTimeout(() => {
-      var modal2 = $('.modal3');
-      modal2.css('display', 'block');
+      var modal3 = $('#messagesModal');
+      modal3.css('display', 'block');
     }, 500);
   });
 
@@ -57,8 +56,11 @@ if (Meteor.isClient) {
     'click #create' (event) {
       Blaze.render(Template.Create, document.body);
     },
-    'click #messagingicon' (event) {
+    'click #messages' (event) {
       Blaze.render(Template.MyMessages, document.body);
+    },
+    'click #you' (event) {
+      $('#youmenu').show();
     }
   });
 
@@ -418,6 +420,8 @@ if (pass){
 
   });
 
+
+
 Template.YourOrders.helpers({
   yourorders: function(){
     return Orders.find();
@@ -425,36 +429,20 @@ Template.YourOrders.helpers({
 });
 
 Template.MyMessages.events({
-  "click #send": function() {
+   "click #send":function(message,username){
      var message = $('#chat-message').val();
+     var user = Meteor.users.findOne({_id: userId});
      chatCollection.insert({
-       username: 'me',
-       message: message
-     });
-     chatStream.emit('chat', message);
-      $('#chat-message').val('');
-   },
-   "chat":function(message,username){
-     chatCollection.insert({
-       username: username,
-       subscriptionId: this.subscriptionId,
-       message: message
+        user: user.username(),
+       message: message,
      });
    }
 });
 
-var subscribedUsers = {};
 
-Template.MyMessages.helpers({
-  "user": function() {
-    return (this.username)? this.username: this.subscriptionId;
-  },
-  "messagesreceived": function(){
-    return chatCollection.find({});
-  },
-  "messagessent": function(){
-    return chatCollection.find({});
-  }
-});
+
+
+
+
 
 }

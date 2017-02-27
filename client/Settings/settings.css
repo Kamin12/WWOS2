@@ -1,0 +1,9 @@
+#Settings {
+  margin-top: 5em;
+    position: fixed;
+    font-family: "San Francisco Text";
+    z-index: 10000000000000;
+    font-size: 2em;
+    color: black;
+    float: right;
+}

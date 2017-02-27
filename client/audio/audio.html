@@ -1,0 +1,77 @@
+<template name="AudioFeed">
+    <div id="music_feed_bg">
+        <audio id="music">
+            <source src="" type="audio/mpeg">
+        </audio>
+        {{#each audio in audios}}
+            {{>AudioItem audio=audio}}
+        {{/each}}
+    </div>
+  </template>
+
+  <!-- AUDIO ITEM -->
+
+  <template name="AudioItem">
+      <div id="image_div">
+            <p class="normal" style="float:left;"> {{audio.Date}}</p>
+            <p class="normal" style="float:left;"> {{audio.Location}}</p>
+            <p class="tag" style="float:right;">{{audio.Tags}}</p>
+          <div class="music_info_image">{{audio.Image}}</div>
+          <div class="like_button_dark" style="margin-left:30%;"><p class="music_info_buttons_text"> LIKE </p></div>
+          <div class="save_button_dark"><p class="music_info_buttons_text"> SAVE </p></div>
+          <div class="share_button_dark"><p class="music_info_buttons_text"> SHARE </p></div>
+          <div class="song_title" style="float:left;"><p>{{audio.Title}}</p></div>
+          <div class="creator_name" colspan="4"><p>{{audio.CreatorsImage}}</p> </div>
+        </div>
+  </template>
+
+<!-- AUDIO STREAM -->
+
+<template name="StreamAudio">
+    {{#each audioTitle in audioContext}}
+    {{>StreamAudioResuable (audioArgs audioTitle)}}
+    {{/each}}
+</template>
+
+
+<template name="StreamAudioReusable">
+  <div id="bg">
+    <div id="music_info_div">
+        <div id="music_info_image" style="display:inline-block;"></div>
+                  <p class="music_info_text2">{{CreatorsAudio}} </p>
+                  <p class="date_text_dark"> {{DateAudio}}</p>
+                  <p class="date_text_dark"> {{LocationAudio}}</p>
+                  <p colspan="4" class="music_info_text3" style="float:left;">{{TitleAudio}}</p>
+                  <div class="like_button_dark" style="float: left; margin-right:10px;"><p class="music_info_buttons_text" > LIKE </p> </div>
+                  <div class="save_button_dark" style="float: left; margin-right:10px;"><p class="music_info_buttons_text" > SAVE </p> </div>
+                  <div class="share_button_dark" style="float: left; margin-right:10px;"><p class="music_info_buttons_text"> SHARE </p></div>
+                    {{AddAudio}}
+                      <p class="music_info_buttons_text"> SHARE <img src="sharebutton.png" width="8" height="8" /> </p>
+                      <div class="share_box" style="display:none;">
+                          {{>shareit getSharingData this.title this.url}}
+                      </div>
+                  </div>
+                  <div class="buy_button_dark" style="float: left; margin-right:10px;"><p class="music_info_buttons_text" > BUY </p> </div>
+      </div>
+      <div id="music_details">
+        <table style="float:left;margin-left:2em;">
+                  <tr>
+                      <td class="music_details_text"> Comments</td> &nbsp;
+                      <td> <span class="music_details_text"> Leave a message </span> </td>
+                  </tr>
+                  <img src="{{profilePic.url}}" width="42" height="42" class="inline">
+                  <tr>
+                      <td class="music_details_text">Purchases</td>&nbsp;
+                      <td class="music_details_text">In # of clouds</td>&nbsp;
+                      <td class="music_details_text"> In # of streams </td>&nbsp;
+                      <td class="music_details_text"> Likes</td>&nbsp;
+                      <td class="music_details_text"> tag</td> &nbsp;
+                      <td class="music_details_text"> {{TagsAudio}} </td>
+                  </tr>
+              </table>
+              <div class="recommendedaudio">
+                <p>More from {{user.profile.lname}}: </p>
+              </div>
+      </div>
+      {{>CommentArea}}
+</template>

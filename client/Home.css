@@ -1,19 +1,4 @@
 /* CSS declarations go here */
-input::-webkit-input-placeholder {
-  color: white !important;
-}
-
-input:-moz-placeholder {
-color: white !important;
-}
-
-input::-moz-placeholder {
-color: white !important;
-}
-
-input:-ms-input-placeholder {
-color: white !important;
-}
 
 @font-face {
 	font-family:'Roboto';
@@ -82,7 +67,8 @@ color: white !important;
 }
 
 ul {
-	padding-left:1%;
+  padding-left: 1%;
+  margin-bottom: 15em;
 }
 
 body {
@@ -150,12 +136,6 @@ html {
   border: 1px solid rgba(122, 153, 154, 0.96);
 }
 
-#productTitle {
-  width: 60%;
-  border: 1px solid rgb(234, 234, 234);
-  height: 3em;
-}
-
 #productqty {
   width: 6%;
   height: 3em;
@@ -163,36 +143,30 @@ html {
   margin-top: 2em;
 }
 
-#productdescription {
-  width: 60%;
-  border: 1px solid rgb(234, 234, 234);
-  height: 6em;
-  margin-top: 2em;
-}
-
 #shareproduct {
-  background-color: rgb(0, 0, 0);
-padding-right: 55%;
-border: none;
-color: white;
-letter-spacing: .4em;
-text-transform: uppercase;
-padding-left: 44%;
-padding-top: 1em;
-padding-bottom: 1em;
-bottom: 0px;
-font-size: .8em;
-position: fixed;
-font-family: "San Francisco Text";
-display: hidden;
+	background-color: rgb(0, 0, 0);
+	    padding-right: 55%;
+	    border: none;
+	    color: #ffffff;
+	    letter-spacing: 1em;
+	    text-transform: uppercase;
+	    padding-left: 40%;
+	    padding-top: 1em;
+	    padding-bottom: 1em;
+	    bottom: 0px;
+	    font-size: .8em;
+	    position: fixed;
+	    font-family: "San Francisco Text";
 }
 
 #price {
   font-family: "San Francisco Text";
-      font-size: .9em;
-      margin-right: 1.3em;
-      float: right;
-      font-weight: 600;
+  font-size: .9em;
+  margin-right: 1.3em;
+  float: right;
+  padding-left: 2em;
+  padding-top: .1em;
+  font-weight: 600;
 }
 
 #saleprice {
@@ -380,16 +354,52 @@ border-radius: 10px;
 }
 
 
-#messages {
-  display: inline-block;
-      position: absolute;
-      margin-top: .15em;
-      height: 2.7em;
-      padding-right: .4em;
-      border-radius: 100px;
-      z-index: 10000000000;
-      margin-left: 10%;
+
+
+#loginbutton{
+  margin-top: 14em;
+  display: block;
+  width: 30%;
+  margin-left: 36%;
+  z-index: 10000000000000000000000000000;
+  position: fixed;
+  text-align: center;
+  padding: 1em;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.26);
+  font-family: "San-Francisco";
+  color: rgb(255, 255, 255);
+  letter-spacing: .4em;
+  font-weight: 300;
+  border: 1px solid rgba(255, 255, 255, 0.03);
 }
+
+.modal-content5 {
+  background-color: rgba(255, 255, 255, 0);
+border: 1px solid black;
+bottom: 0;
+height: 100%;
+width: 100%;
+position: fixed;
+}
+
+#signupbutton {
+  margin-top: 18em;
+  display: block;
+  width: 30%;
+  margin-left: 36%;
+  text-align: center;
+  padding: 1em;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.26);
+  font-family: "San-Francisco";
+  color: rgb(255, 255, 255);
+  letter-spacing: .4em;
+  position: fixed;
+  font-weight: 300;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
 
 
 .market {
@@ -401,12 +411,13 @@ border: 1px solid black;
 
 #title {
   font-family: "San-Francisco";
-  font-size: 1.9em;
+  font-size: 1.7em;
   font-weight: 300;
-  float: left;
   padding-top: .2em;
-  margin-left: 20%;
-  margin-top: 3.25%;
+  color: black;
+  float: right;
+  margin-right: 8em;
+  letter-spacing: .15em;
 }
 
 #sizecreate select {
@@ -436,176 +447,311 @@ border: 1px solid black;
   z-index: 10000000000000;
 }
 
+.modal35 {
+  position: fixed;
+      z-index: 10000000000000000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+}
+
+.modal2345 {
+  display: block;
+  position: fixed;
+  z-index: 1000000000000000000000000;
+  float: left;
+  margin-top: 4em;
+  height: 90%;
+  top: 0;
+  overflow: auto;
+  background-image: background-image: -webkit-gradient( linear, right bottom, left bottom, color-stop(0, #0B917F), color-stop(1, #34396E) );
+  background-image: -o-linear-gradient(left, #0B917F 0%, #34396E 100%);
+  background-image: -moz-linear-gradient(left, #0B917F 0%, #34396E 100%);
+  background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 30%, rgb(255, 255, 255) 100%);
+  background-image: -ms-linear-gradient(left, #0B917F 0%, #34396E 100%);
+  background-image: linear-gradient(to left, #002310 0% #061833 100%);
+}
+
+modal-contentyou0 {
+  background-color: rgb(0, 0, 0);
+  height: 90%;
+  width: 30%;
+  margin-top: 4em;
+  position: fixed;
+  left: 0;
+  display: block;
+}
+
+.closeyou1 {
+	font-family: "San Francisco Text";
+	letter-spacing: 5px;
+	padding-top: 1.8em;
+	font-size: .8em;
+	color: black;
+	background-color: rgba(255, 255, 255, 0.11);
+	display: block;
+	padding-left: 18em;
+	padding-bottom: 1.8em;
+}
+
+#wread2 {
+  font-family: "Helvetica";
+  font-style: italic;
+}
+
+#about {
+  display: block;
+  color: #193834;
+  letter-spacing: 2px;
+  padding-right: 5em;
+  margin-top: 1em;
+  font-size: 1em;
+  padding-left: 5em;
+  padding-top: .8em;
+  padding-bottom: .8em;
+  margin-left: 4%;
+}
+
+#termsandconditions {
+  display: block;
+  font-size: .85em;
+  margin-left: 5%;
+  border: 5px solid black;
+  color: black;
+  letter-spacing: 1px;
+  margin-right: 10%;
+  padding-right: 5em;
+  padding-left: 5em;
+  padding-top: .8em;
+  padding-bottom: .8em;
+}
+
+#advertise {
+  margin-bottom: 1.5em;
+  display: block;
+  color: white;
+  letter-spacing: 5px;
+  padding-right: 5em;
+  margin-top: 4em;
+  padding-left: 5em;
+  padding-top: .8em;
+  padding-bottom: .8em;
+  margin-left: 4%;
+}
+
+#investors {
+  display: block;
+  color: black;
+  font-size: .8em;
+  letter-spacing: 5px;
+  padding-right: 5em;
+  padding-left: 5em;
+  padding-top: .8em;
+  padding-bottom: .8em;
+}
+
+#careers {
+  margin-bottom: 1.5em;
+  display: block;
+  color: black;
+  letter-spacing: 5px;
+  font-size: .8em;
+  padding-right: 5em;
+  padding-left: 5em;
+  padding-top: .8em;
+  padding-bottom: .8em;
+}
+
+#allmesslist {
+  color: black;
+  font-family: "San Francisco Text";
+  text-transform: uppercase;
+  font-size: .7em;
+  letter-spacing: .5em;
+  margin-left: 20%;
+}
+
+#recentmess {
+  width: 21.3%;
+  background-color: rgb(197, 197, 197);
+  height: 85%;
+  float: left;
+  border: 1px solid #f9f9f9;
+  margin-top: 3.2%;
+}
+
+.conversation {
+  width: 55%;
+  border: 5px solid rgba(113, 113, 113, 0.03);
+  background-color: #ffffff;
+  margin-left: 26%;
+  height: 63%;
+  margin-top: 4.3%;
+}
+
 .modal4 {
   position: fixed;
-top: 0;
-width: 80%;
-margin-left: 10%;
-margin-top: 5%;
-height: 90%;
-background-image: background-image: -webkit-gradient( linear, right bottom, left bottom, color-stop(0, #0B917F), color-stop(1, #34396E) );
-background-image: -o-linear-gradient(left, #0B917F 0%, #34396E 100%);
-background-image: -moz-linear-gradient(left, #0B917F 0%, #34396E 100%);
-background-image: -webkit-linear-gradient(left, rgb(0, 52, 74) 30%, rgb(41, 58, 45) 100%);
-background-image: -ms-linear-gradient(left, #0B917F 0%, #34396E 100%);
-background-image: linear-gradient(to left, #002310 0% #061833 100%);
-z-index: 10000000000000;
-display: block;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  margin-top: 5.2%;
+  height: 100%;
+  background-image: background-image: -webkit-gradient( linear, right bottom, left bottom, color-stop(0, #0B917F), color-stop(1, #34396E) );
+  background-image: -o-linear-gradient(left, #0B917F 0%, #34396E 100%);
+  background-image: -moz-linear-gradient(left, #0B917F 0%, #34396E 100%);
+  background-image: -webkit-linear-gradient(left, rgb(255, 255, 255) 30%, rgb(245, 245, 245) 100%);
+  background-image: -ms-linear-gradient(left, #0B917F 0%, #34396E 100%);
+  background-image: linear-gradient(to left, #002310 0% #061833 100%);
+  z-index: 1000000;
 }
 
 #createnewmessage {
-  height: 0em;
-top: 0;
-background-color: rgba(255, 255, 255, 0.76);
+  left: 0px;
+      position: fixed;
+      z-index: 10000;
 }
 
-#newmessage {
-  width: 45%;
-height: 22em;
-margin-left: auto;
-border-radius: 20px;
-border: 1px solid grey;
-margin-right: auto;
-display: block;
-margin-top: 13em;
+.message-input {
+  position: fixed;
+  width: 90%;
+  border: cyan;
+  bottom: 0;
+}
+
+#addmessage {
+  width: 61%;
+  height: 4em;
+  border: 3px solid #fdfdfd;
+  padding-bottom: 2em;
+}
+
+#createaamessage {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background-color: rgba(68, 68, 68, 0.88);
+  margin-left: auto;
+  display: block;
+  margin-right: auto;
+  position: absolute;
+}
+
+#greybackground {
+  height: 80%;
+  position: absolute;
+  width: 100%;
+  margin-top: 4em;
+}
+
+
+
+.close {
+	color: #ffffff;
+	border-radius: 2px;
+	float: right;
+	z-index: 100000000000000000000000000000;
+	position: fixed;
+	width: 15%;
+	text-align: center;
+	font-size: .8em;
+	background-color: rgb(0, 0, 0);
+	border: rgba(78, 0, 0, 0.42);
+	padding-top: .5em;
+	padding-bottom: .5em;
+	right: 0px;
+	height: 3em;
+	margin-left: .1%;
+	font-family: "San Francisco Text";
+	letter-spacing: 15px;
+}
+
+
+
+#featured {
+  background-color: rgb(177, 191, 184);
+  letter-spacing: .4em;
+  padding-left: 1em;
+  border: 1px solid rgba(0, 255, 243, 0);
+  font-size: .45em;
+  border-radius: 2px;
+  padding-right: 1em;
+  padding-top: .6em;
+  width: 8%;
+  margin-left: 19%;
+  position: absolute;
+  margin-top: 5.9%;
+  display: block;
+  visibility: hidden;
+  padding-bottom: .45em;
+  font-weight: 300;
+  color: rgb(255, 255, 255);
+  font-family: "San Francisco Text";
+  font-style: italic;
+}
+
+#featured:hover {
+  background-color: rgba(25, 30, 35, 0.8);
+  letter-spacing: .4em;
+  padding-left: 1em;
+  border: 1px solid rgba(0, 255, 243, 0);
+  font-size: .45em;
+  border-radius: 2px;
+  padding-right: 1em;
+  padding-top: .6em;
+  width: 8%;
+  margin-left: 18%;
+  position: absolute;
+  margin-top: 5.9%;
+  display: block;
+  padding-bottom: .45em;
+  font-weight: 300;
+  color: rgb(255, 255, 255);
+  font-family: "San Francisco Text";
+  font-style: italic;
+}
+
+#youmenu {
+  display:hidden;
+  font-family: "San Francisco Text";
 }
 
 #send {
   display: block;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: rgba(0, 1, 41, 0.6);
-    width: 5%;
-    font-family: "San Francisco Text";
-    font-size: 1em;
-    border-radius: 5px;
-    border: 1px solid rgba(0, 92, 93, 0.64);
-    color: white;
-}
-
-#ProductSelection {
-  font-family: "San-Francisco";
-  color: rgba(0, 0, 0, 0.87);
-  letter-spacing: .3em;
-  font-size: 3em;
-  margin-top: 2.5em;
-  width: 15em;
-  z-index: 1000000000000;
-  text-transform: uppercase;
-  padding-bottom: 1em;
-  margin-left: 3em;
-  position: fixed;
-}
-
-#ProductSelection2 {
-  font-family: "San Francisco Text";
-  padding-left: 3em;
+  margin-left: auto;
+  padding-left: 12em;
+  padding-right: 12em;
+  padding-top: .7em;
+  padding-bottom: .8em;
+  border-radius: 2px;
   border-top: none;
-  padding-right: 3em;
+  margin-top: 1em;
+  border-bottom: 3px solid rgb(255, 255, 255);
+  border-left: none;
+  border-right: none;
+  margin-right: auto;
+  background-color: rgba(255, 0, 0, 0.34);
+  color: rgba(255, 255, 255, 0.54);
+  font-family: "San Francisco Text";
   font-size: .8em;
-  border-bottom: none;
-  padding-bottom: 6em;
-  padding-top: 6em;
-  border: 1px solid rgb(134, 134, 134);
-  position: fixed;
-  margin-left: 17em;
-  letter-spacing: .5em;
-  margin-top: 20em;
-  text-transform: uppercase;
-  float: left;
-  background-color: rgb(22, 32, 37);
-  color: rgb(215, 243, 255);
+  letter-spacing: .4em;
 }
 
-#ProductSelection2:hover {
-  font-family: "San Francisco Text";
-  padding-left: 3em;
-  border-top: none;
-  padding-right: 3em;
-  font-size: .8em;
-  border-bottom: none;
-  background-color: rgba(255, 255, 255, 0.19);
-  padding-bottom: 6em;
-  padding-top: 6em;
-  border: 1px solid rgba(64, 64, 56, 0.16);
-  position: fixed;
-  margin-left: 17em;
-  letter-spacing: .5em;
-  margin-top: 15em;
-  text-transform: uppercase;
-  float: left;
-  background-color: black;
-  color: white;
-
+#ProductSelection6 {
+	font-family: "San-Francisco";
+	color: rgba(0, 0, 0, 0.87);
+	letter-spacing: .3em;
+	display: inline-block;
+	font-size: 1em;
+	margin-left: 40%;
+	position: fixed;
+	width: 15em;
+	z-index: 1000000000000000000000000000;
+	text-transform: uppercase;
+	padding-bottom: 1em;
+	float: right;
 }
-
-
-#ProjectSelection2 {
-  font-family: "San Francisco Text";
-      padding-left: 3em;
-      padding-right: 3em;
-      padding-bottom: 6em;
-      padding-top: 6em;
-      font-size: .8em;
-      letter-spacing: .5em;
-      background-color: rgb(22, 32, 37);
-      border: 1px solid rgb(134, 134, 134);
-      position: fixed;
-      color: rgb(215, 243, 255);
-      margin-left: 38em;
-      text-transform: uppercase;
-      margin-top: 20em;
-  }
-
-
-#ProjectSelection2:hover {
-  font-family: "San Francisco Text";
-  backgound-color:black;
-  padding-left: 3em;
-  padding-right: 3em;
-  padding-bottom: 6em;
-  padding-top: 6em;
-  font-size: .8em;
-  letter-spacing: .5em;
-  border: 1px solid rgba(64, 64, 56, 0.16);
-  position: fixed;
-  color:white;
-  margin-left: 38em;
-  text-transform: uppercase;
-  margin-top: 15em;
-}
-
-#AccountSelection2 {
-  font-family: "San Francisco Text";
-  padding-left: 4em;
-  padding-right: 4em;
-  padding-bottom: 6em;
-  padding-top: 6em;
-  border: 1px solid black;
-  border-radius: 1000px;
-  position: fixed;
-  margin-left: 48em;
-  text-transform: uppercase;
-  margin-top: 16em;
-}
-
-#AccountSelection2:hover {
-  font-family: "San Francisco Text";
-  padding-left: 4em;
-  padding-right: 4em;
-  padding-bottom: 6em;
-  padding-top: 6em;
-  border: 1px solid black;
-  border-radius: 1000px;
-  position: fixed;
-  margin-left: 48em;
-  text-transform: uppercase;
-  margin-top: 16em;
-  background-color: black
-  color:white;
-}
-
-
 
 
 
@@ -629,38 +775,111 @@ margin-top: 13em;
 }
 
 .modal2{
-  display: block;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-image: background-image: -webkit-gradient( linear, right bottom, left bottom, color-stop(0, #0B917F), color-stop(1, #34396E) );
-  background-image: -o-linear-gradient(left, #0B917F 0%, #34396E 100%);
-  background-image: -moz-linear-gradient(left, #0B917F 0%, #34396E 100%);
-  background-image: -webkit-linear-gradient(left, rgb(255, 255, 255) 30%, rgb(255, 255, 255) 100%);
-  background-image: -ms-linear-gradient(left, #0B917F 0%, #34396E 100%);
-  background-image: linear-gradient(to left, #002310 0% #061833 100%);
-  z-index: 10000000000000;
+	display: block;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	bottom: 0px;
+	width: 100%;
+	height: 90%;
+	overflow: auto;
+	background-image: background-image: -webkit-gradient( linear, right bottom, left bottom, color-stop(0, #0B917F), color-stop(1, #34396E) );
+	background-image: -o-linear-gradient(left, #0B917F 0%, #34396E 100%);
+	background-image: -moz-linear-gradient(left, #0B917F 0%, #34396E 100%);
+	background-image: -webkit-linear-gradient(left, rgb(255, 255, 255) 30%, rgb(255, 255, 255) 100%);
+	background-image: -ms-linear-gradient(left, #0B917F 0%, #34396E 100%);
+	background-image: linear-gradient(to left, #002310 0% #061833 100%);
+	z-index: 10000000000000;
 }
 
 .modal-content {
-  background-color: rgb(255, 255, 255);
-  border: 1px solid black;
-  bottom: 0;
-  height: 100%;
-  width: 100%;
-  position: fixed;
+	background-color: rgb(255, 255, 255);
+	height: 70%;
+	margin-left: 9%;
+	position: fixed;
+	margin-top: 15em;
+	display: block;
+	flex-direction: row;
+}
+
+.closeyou {
+  font-family: "San Francisco Text";
+  letter-spacing: 5px;
+  padding-top: 1.8em;
+  font-size: .8em;
+  color: gainsboro;
+  background-color: rgba(255, 255, 255, 0.11);
+  display: block;
+  padding-left: 18em;
+  padding-bottom: 1.8em;
+}
+
+#site2 {
+  margin-bottom: 1.5em;
+display: block;
+color: white;
+letter-spacing: 5px;
+padding-right: 5em;
+margin-top: 4em;
+padding-left: 5em;
+padding-top: .8em;
+padding-bottom: .8em;
+margin-left: 4%;
+}
+
+#settings2 {
+  margin-bottom: 1.5em;
+  display: block;
+  color: white;
+  letter-spacing: 5px;
+  padding-right: 5em;
+  padding-left: 5em;
+  padding-top: .8em;
+  padding-bottom: .8em;
+  margin-left: 4%;
+}
+
+#logout2 {
+  margin-top: 9em;
+  padding-right: 1em;
+  display: block;
+  padding-left: 18em;
+  border-left: none;
+  border-right: none;
+  color: white;
+  font-size: .8em;
+  letter-spacing: 5px;
+  padding-top: 1.2em;
+  padding-bottom: 1.1em;
+}
+
+.modal234 {
+  display: block;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow: auto;
+    background-image: background-image: -webkit-gradient( linear, right bottom, left bottom, color-stop(0, #0B917F), color-stop(1, #34396E) );
+    background-image: -o-linear-gradient(left, #0B917F 0%, #34396E 100%);
+    background-image: -moz-linear-gradient(left, #0B917F 0%, #34396E 100%);
+    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0) 100%);
+    background-image: -ms-linear-gradient(left, #0B917F 0%, #34396E 100%);
+    background-image: linear-gradient(to left, #002310 0% #061833 100%);
+    z-index: 10000000000000;
+}
+
+.modal-contentyou{
+	height: 80%;
+width: 30%;
+margin-top: 4em;
+position: fixed;
+right: 0;
+display: block;
+background-image: -webkit-linear-gradient(bottom, rgb(0, 0, 0) 50%, rgb(4, 23, 18) 100%);
 }
 
 .at-form{
-  background-color: rgba(0, 0, 35, 0.93);
-      height: 100%;
-      margin-top: 4em;
-      width: 100%;
-      position: fixed;
+
 }
 
 .atform {
@@ -737,9 +956,23 @@ z-index: 10000000000000;
   font-size: .8em;
 }
 
+#UserId {
+font-family: "San Francisco Text";
+font-style: italic;
+letter-spacing: 5px;
+font-size: 4em;
+margin-left: 36.5%;
+}
+
 #aboutaccountimage3 {
 height: 2em;
 border-radius: 100px;
+}
+
+#userimage {
+border: 1px solid white;
+padding: 2em;
+border-radius: 10px;
 }
 
 #streamproductcontainer {
@@ -750,28 +983,54 @@ position: absolute;
 bottom: 0px;
 }
 
+#enterbio {
+  background-color: rgba(255, 255, 255, 0.13);
+height: 8em;
+margin-top: 1.5em;
+width: 30%;
+}
 
+#enterlocation {
+  background-color: rgba(255, 255, 255, 0.13);
+      height: 4em;
+      width: 30%;
+      margin-top: 2em;
+}
+
+#userregistrationsubmit {
+  padding-left: 9em;
+  padding-right: 9em;
+  background-color: #547754;
+  border: none;
+  padding-top: 1.5em;
+  color: white;
+  letter-spacing: 7px;
+  padding-bottom: 1.5em;
+  margin-top: 2em;
+}
 
 #account {
-  font-family: "San-Francisco";
-  font-size: 2em;
-  font-weight: 600;
-  color: #000000;
-  display: block;
-  margin-top: 3%;
-  position: absolute;
-  margin-left: 4.5%;
+font-family: "San-Francisco";
+font-size: 1.7em;
+font-weight: 600;
+color: #000000;
+letter-spacing: .15em;
+display: block;
+position: absolute;
+margin-left: 15%;
 }
 
 
 
 /* Stream Styles */
 #accountstream {
-	font-family: "San Francisco Text";
-	font-weight: 600;
-	margin-left: 24%;
-	display: inline-block;
-	margin-top: 1em;
+  font-family: "San Francisco Text";
+  font-weight: 600;
+  margin-left: 15%;
+  display: inline-block;
+  margin-top: 3em;
+  font-size: 3em;
+  color: rgb(255, 255, 255);
 }
 
 #joincall2 {
@@ -790,28 +1049,31 @@ bottom: 0px;
 }
 
 #titlestream {
-	font-family: "San Francisco Text";
-	font-weight: 300;
-	padding-top: 1em;
-	padding-bottom: 1em;
-	padding-left: 1em;
+  font-family: "San Francisco Text";
+  font-weight: 300;
+  padding-left: 1em;
+  display: block;
+  margin-left: 8%;
+  color: white;
+  font-size: 3em;
 }
 
 #buydarkfeed {
-  font-family: "San Francisco Text";
-      color: rgb(255, 255, 255);
-      border: 2px solid rgb(0, 72, 69);
-      background-color: rgb(0, 33, 35);
-      font-size: .9em;
-      margin-top: 3.6%;
-      font-weight: 600;
-      letter-spacing: .2em;
-      width: 27%;
-      bottom: 0em;
-      padding-top: .7em;
-      float: right;
-      margin-right: 15%;
-      padding-bottom: .7em;
+  font-family: "Open Sans";
+  padding-left: 3.5em;
+  float: right;
+  padding-right: 3.5em;
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  border: none;
+  background-color: rgb(0, 0, 0);
+  font-size: .9em;
+  font-weight: 600;
+  margin-right: 17%;
+  letter-spacing: .4em;
+  bottom: 0em;
+  padding-top: .9em;
+  padding-bottom: .9em;
 }
 
 #MainFeed {
@@ -835,12 +1097,10 @@ bottom: 0px;
 }
 
 #mainimages {
-    margin-left: auto;
-    margin-right: auto;
-    width:50%;
-    margin-top: 8.5em;
-    display: block;
-    margin-bottom: 10em;
+  width: 60%;
+      margin-top: 3.5em;
+      display: block;
+      margin-bottom: 10em;
 }
 
 
@@ -892,19 +1152,20 @@ bottom: 0px;
 }
 
 #buydarkfeed:hover {
-	font-family: "San Francisco Text";
-	    color: gold;
-	    border: 1px solid rgb(0, 0, 0);
-	    background-color: black;
-	    font-size: .9em;
-	    font-weight: 600;
-	    letter-spacing: .2em;
-	    padding-bottom: .7em;
-	    width: 20%;
-	    bottom: 0em;
-	    padding-top: .7em;
-	    float: right;
-	        margin-right: 16%;
+  font-family: "San Francisco Text";
+  color: rgb(255, 255, 255);
+  border: none;
+  background-color: rgba(0, 80, 58, 0.99);
+  font-size: .8em;
+  margin-top: 1.1%;
+  font-weight: 600;
+  letter-spacing: .2em;
+  width: 20%;
+  bottom: 0em;
+  padding-top: .7em;
+  float: right;
+  margin-right: 15%;
+  padding-bottom: .7em;
 }
 
 #shareicon {
@@ -982,12 +1243,12 @@ bottom: 0px;
 }
 
 #leftarrowstyle {
-	height: 100%;
-	    width: 4.5em;
-	    float: left;
-	    position: fixed;
-			top: 0;
-			left: 0;
+  height: 100%;
+      width: 4.5em;
+      float: left;
+      position: fixed;
+      top: 0;
+      left: 0;
 }
 
 #leftarrowstyle:hover {
@@ -1001,12 +1262,11 @@ bottom: 0px;
 }
 
 #rightarrowstyle {
-	width: 4.5em;
-	    float: right;
-	    right: 0;
-	    top: 0;
-	    height: 100%;
-	    position: fixed;
+  width: 4.5em;
+  top: 0;
+  margin-left: 45%;
+  height: 100%;
+  position: fixed;
 }
 
 #rightarrowstyle:hover {
@@ -1457,6 +1717,32 @@ color: white;
     font-family: "San Francisco Text";
 }
 
+#mainiconsthree{
+  position: fixed;
+  right: 0;
+  font-size: .8em;
+  color: rgb(255, 255, 255);
+  font-family: "San Francisco Text";
+  padding-left: 20em;
+  padding-right: 15em;
+  padding-top: 1.3em;
+  padding-bottom: .9em;
+  background-color: rgba(0, 0, 0, 0.9);
+  letter-spacing: .5em;
+  margin-right: .3em;
+  border: 1px solid rgba(217, 255, 248, 0.09);
+  margin-left: 30%;
+}
+
+#mainiconsfour{
+  display: inline-block;
+  z-index: 10000000000000000000000;
+  color: rgb(255, 255, 255);
+  float: right;
+  margin-top: 1em;
+  margin-right: 5%;
+}
+
 #city {
 	padding: 1px 0px 4px 29px;
 	    background-color: black;
@@ -1490,55 +1776,46 @@ color: white;
 }
 
 .buybuttonnavigator {
-	padding-top: .6em;
-	padding-bottom: .6em;
-	padding-right: 10em;
-	padding-left: 10em;
-	font-family: "San Francisco Text";
-	background-color: #000000;
-	display: inline-block;
-	margin-top: .8em;
-	font-size: 85%;
-	border-radius: 2%;
-	margin-left: 24%;
-	border: 1px solid black;
-	width: 30%;
+  position: fixed;
+      margin-top: 30em;
+      margin-left: 3%;
+      border: 3px solid white;
+      padding-left: 5em;
+      font-family: "San Francisco Text";
 }
 
 
 #pricey {
-	color: white;
-	    letter-spacing: .6em;
-	    padding-left: 10em;
-	    padding-right: 10em;
-	    padding-top: .4em;
-	    padding-bottom: .4em;
-	    border-right: none;
-	    border-left: none;
-	    background-color: rgba(255, 255, 255, 0);
-	    border-top: 1px solid rgba(177, 255, 181, 0.21);
-	    border-bottom: 1px solid rgba(0, 253, 255, 0.21);
+  color: white;
+  letter-spacing: .6em;
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-top: .4em;
+  padding-bottom: .4em;
+  border-right: none;
+  border-left: none;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 #mediatab {
-	font-family: "San Francisco Text";
-	font-weight: 600;
-	margin-left: 15%;
-	font-size: .9em;
-	margin-top: 1.2em;
-	display: inline-block;
+  font-family: "San Francisco Text";
+      font-weight: 600;
+      margin-left: 15%;
+      font-size: .9em;
+      margin-top: 3.2em;
+      display: inline-block;
 }
 
 
 
 #abouttab {
-	display: inline-block;
-	    margin-left: 14%;
-	    font-family: "San Francisco Text";
-	    font-weight: 600;
-	    font-size: .9em;
-	    position: fixed;
-	    margin-top: 1.3em;
+  display: inline-block;
+      margin-left: 14%;
+      font-family: "San Francisco Text";
+      font-weight: 600;
+      font-size: .9em;
+      position: fixed;
+      margin-top: 3.2em;
 }
 
 #buyicon {
@@ -1549,14 +1826,14 @@ padding-top: 1em;
 }
 
 #streamnavigatorone {
-	bottom: 0;
-	position: fixed;
-	height: 6em;
-	width: 100%;
-	border-left: none;
-	border-right: none;
-	border-top: 1px solid rgba(210, 210, 210, 0.2);
-	background-color: white;
+  position: fixed;
+  right: 0px;
+  height: 100%;
+  width: 40%;
+  border-left: none;
+  border-right: none;
+  border-top: 1px solid rgba(210, 210, 210, 0.2);
+  background-color: black;
 }
 
 #streamnavigatorthree {
@@ -1578,9 +1855,10 @@ padding-top: 1em;
 }
 
 #sweatshirtinfo {
-	margin-top: .3em;
-	    margin-left: 8em;
-	    z-index: 1000000000;
+  margin-top: .3em;
+  z-index: 1000000000;
+  width: 100%;
+  height: 5em;
 }
 
 #iconsinfothree {
@@ -1589,9 +1867,6 @@ padding-top: 1em;
 	background-color: white;
 
 }
-
-
-
 
 .master-navbar {
 top: 0;
@@ -1602,41 +1877,30 @@ position: fixed;
 
 #lowerlowerlower {
   bottom: 0px;
-      position: fixed;
-      width: 100%;
-      background-image: -webkit-linear-gradient(left, rgb(0, 29, 17) 30%, rgb(26, 30, 62) 100%);
+  position: fixed;
+  height: 3em;
+  width: 100%;
+  background-image: -webkit-linear-gradient(bottom, rgb(0, 8, 23) 10%, rgb(0, 10, 25) 80%);
 }
 
 #waveicon {
   display: inline-block;
-  position: relative;
-  height: 2.5em;
-  width: 2.5em;
-  border: 2px solid rgba(183, 228, 216, 0.47);
-  padding-right: .5em;
-  border-radius: 100px;
-  padding-left: .5em;
-  padding-top: .5em;
-  padding-bottom: .5em;
-  background-color: rgb(255, 255, 255);
-  margin-left: 6em;
-  margin-top: .3em;
-  z-index: 10000000000;
+      position: relative;
+      float: left;
+      margin-left: 5%;
+      margin-top: 1.3%;
+      height: 1.6em;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      padding-right: .1em;
+      border-radius: 100px;
+      padding-left: .2em;
+      padding-top: .2em;
+      padding-bottom: .2em;
+      background-color: rgba(255, 255, 255, 0);
+      z-index: 10000000000;
 }
 
-#createicon{
-  display: inline-block;
-      position: relative;
-      height: 2.5em;
-      width: 7.5em;
-      padding-right: .5em;
-      border-radius: 100px;
-      padding-left: .5em;
-      padding-top: .5em;
-      padding-bottom: .5em;
-      z-index: 10000000000;
-      margin-left: 30%;
-}
+
 
 
 #imagesquareone {
@@ -1661,20 +1925,7 @@ position: fixed;
 }
 
 #waveicon:hover {
-	display: inline-block;
-	position: relative;
-	height: 1.7em;
-	width: 1.7em;
-	padding-right: .25em;
-	padding-left: .25em;
-	padding-top: .25em;
-	padding-bottom: .25em;
-	border-radius: 100px;
-	background-color: rgb(255, 255, 255);
-	margin-left: 1em;
-	margin-top: .26em;
-	z-index: 10000000000;
-	border: 3px solid rgb(189, 255, 231);
+	border: 3px dotted rgb(189, 255, 231);
 	-webkit-transition: all 800ms ease;
 	-moz-transition: all 800ms ease;
 	-o-transition: all 800ms ease;
@@ -1695,78 +1946,93 @@ font-style: Italic;
 }
 
 .master-navbar>nav {
-  height: 1.5em;
-  list-style-type: none;
-  margin: 0 auto;
-  position: fixed;
-  width: 100%;
+	height: 4em;
+	list-style-type: none;
+	margin: 0 auto;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	opacity: 1;
+	left: 0;
+	right: 0;
+	z-index: 1000000000000000000000000000000000;
+}
+
+
+.master-navbarusersite{
   top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000000000000000000000000000000000;
+margin-top: 2em;
+z-index: 100000000;
+position: fixed;
 }
 
-#newmessage {
-  width: 45%;
-height: 22em;
-margin-left: auto;
-border-radius: 20px;
-border: 1px solid grey;
-margin-right: auto;
-display: block;
-margin-top: 13em;
-}
 
-#messages {
-  display: block;
-margin-left: auto;
-margin-right: auto;
-background-color: rgba(0, 1, 41, 0.6);
-width: 5%;
-font-family: "San Francisco Text";
-font-size: 1em;
-border-radius: 5px;
-border: 1px solid rgba(0, 92, 93, 0.64);
-color: white;
-}
-
-.master-navbar>nav a,  .master-navbar>nav a:link{
-  display: inline-block;
-      text-align: center;
-      z-index: 1001;
-      -webkit-transition: all 150ms ease;
-      -moz-transition: all 150ms ease;
-      -o-transition: all 150ms ease;
-      transition: all 150ms ease;
-      color: rgb(193, 193, 193);
-      font-family: "San Francisco Text";
-      padding-right: 1.7em;
-      padding-left: .3em;
-      color: rgb(255, 255, 255);
-      border-bottom: none;
-      border-top: none;
-      letter-spacing: 2px;
-      font-weight: 600;
-      font-size: .8em;
-      border-right: none;
-      border-left: none;
-      text-decoration: none;
-
-  }
-
-  .master-navbar>nav a:hover  {
-    display: inline-block;
-    text-align: center;
-    z-index: 1001;
-		color: white;
-    -webkit-transition: all 150ms ease;
+  .master-navbarusersite>nav a, .master-navbar>nav a,  .master-navbar>nav a:link{
+		-webkit-transition: all 150ms ease;
     -moz-transition: all 150ms ease;
     -o-transition: all 150ms ease;
     transition: all 150ms ease;
-    /*
-    background-color: rgba(255,255,255, 0.4);
-    */
+    font-family: "San Francisco Text";
+    color: rgb(0, 0, 0);
+    padding-top: .8em;
+    padding-bottom: 1em;
+    font-size: .72em;
+    margin-left: 18%;
+    margin-top: 1.5%;
+    z-index: 1001;
+    font-weight: 600;
+    letter-spacing: 6px;
+    float: left;
+    display: inline-block;
+    }
+
+
+
+
+#siteback {
+  background-color: rgba(0, 49, 51, 0.03);
+      position: absolute;
+      padding-left: 1em;
+      margin-top: .1em;
+      padding-right: 4.2em;
+      border: 1px solid rgba(0, 29, 29, 0.01);
+      display: inline-block;
+      float: left;
+      color: black;
 }
+
+.master-navbarusersite>nav li {
+  display: inline-block;
+font-family: 'San-Francisco';
+text-align: center;
+color: white;
+margin-left: .5em;
+z-index: 1001;
+-webkit-transition: all 150ms ease;
+-moz-transition: all 150ms ease;
+-o-transition: all 150ms ease;
+transition: all 150ms ease;
+}
+
+#waveiconusersite {
+  display: inline-block;
+  position: relative;
+  height: 1.6em;
+  margin-left: 2.4em;
+  border: 1px solid rgba(0, 255, 161, 0.85);
+  padding-right: .1em;
+  border-radius: 100px;
+  padding-left: .2em;
+  padding-top: .2em;
+  padding-bottom: .2em;
+  background-color: rgba(0, 11, 35, 0.47);
+  z-index: 10000000000;
+}
+
+
+
+
+
 
 .nav: hover {
   width: 100%;
@@ -1778,7 +2044,23 @@ position: fixed;
 padding-top: .5em;
 padding-bottom: .63em;
 padding-left: .4em;
+}
 
+
+
+.maintext3 {
+  margin-right: 1.1%;
+  font-size: .4em;
+  background-color: rgba(255, 255, 255, 0.22);
+  float: right;
+  color: rgb(255, 255, 255);
+  letter-spacing: .4em;
+  border: 1px solid white;
+  padding-left: 1.2em;
+  padding-right: 1.2em;
+  margin-top: 1.05em;
+  box-shadow: inset 2px 0px 20px 1px rgba(109, 255, 221, 0.24);
+  text-shadow: 1px 3px 1px rgba(1, 0, 68, 0.3);
 }
 
 #Images {
@@ -1787,40 +2069,60 @@ padding-left: .4em;
 }
 
 
+#lowerideas {
+      width: 100%;
+          display: table;
+}
+
 #lowerideas li {
-  display: inline-block;
-  width: 30%;
-  border: 1px solid rgb(157, 223, 255);
+  display: table-cell;
 }
 
 #mainiconsone {
-  padding-top: .4em;
-  padding-bottom: .4em;
+  margin-top: .3em;
+    float: left;
 }
 
-#mainiconstwo {
-  padding-top: .4em;
-  padding-bottom: .4em;
+#mainiconsfive {
+  position: fixed;
+  width: 15%;
+  text-align: center;
+  font-size: .8em;
+  color: rgb(255, 255, 255);
+  font-family: "San Francisco Text";
+  padding-top: .7em;
+  padding-bottom: .7em;
+  background-color: rgb(72, 72, 72);
+  letter-spacing: .5em;
+  margin-right: .3em;
+  margin-top: .9em;
+  margin-left: 27%;
+  border: 1px solid rgba(0, 208, 255, 0.07);
+  font-weight: 300;
 }
 
-#mainiconsthree {
-  padding-top: .4em;
-  padding-bottom: .4em;
-}
-
-#mainiconsfour {
- padding-top: none;
- padding-bottom:none
-}
 
 .master-navbartwo {
-  background-color: #00242d;
-  height: 2.281em;
+	background-image: -webkit-linear-gradient(left, rgb(255, 255, 255) 1%, rgb(251, 252, 255) 70%);
+	height: 4em;
+	width: 100%;
+	color: black;
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	z-index: 1000000;
+	opacity: 1;
+}
+
+.master-navbartwousersite {
+  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.88) 1%, rgb(0, 9, 43) 30%);
+  box-shadow: inset 20px 20px 20px 60px rgb(0, 0, 0);
+  height: 4em;
   width: 100%;
   position: fixed;
   top: 0px;
   right: 0px;
-  z-index: 100000;
+  z-index: 1000000;
   opacity: 1;
 }
 
@@ -1837,21 +2139,32 @@ padding-left: .4em;
   padding: 0;
 }
 
+#usersitemenu {
+  position: fixed;
+    top: 0px;
+}
+
+#calltojoin {
+  font-family: "San Francisco Text";
+    font-size: 1.4em;
+    color: white;
+    margin-top: 10em;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+}
+
 .master-navbar>nav li {
   display: inline-block;
-      font-family: 'San-Francisco';
-      text-align: center;
-      border-collapse: separate;
-      border: 1px solid rgba(66, 255, 100, 0.12);
-      color: white;
-      background-color: rgba(0, 51, 44, 0.24);
-      margin-top: .1em;
-      width: 24.5%;
-      z-index: 1001;
-      -webkit-transition: all 150ms ease;
-      -moz-transition: all 150ms ease;
-      -o-transition: all 150ms ease;
-      transition: all 150ms ease;
+  font-family: 'San-Francisco';
+  text-align: center;
+  color: white;
+  width: 24.5%;
+  z-index: 1001;
+  -webkit-transition: all 150ms ease;
+  -moz-transition: all 150ms ease;
+  -o-transition: all 150ms ease;
+  transition: all 150ms ease;
 }
 
 
@@ -1928,28 +2241,20 @@ text-transform: uppercase;
 	    padding-bottom: 1em;
 }
 
-
-
-
-
-
-
 .home {
   margin-left: 20%;
 }
 
 #streamnavigatortwo {
-    bottom: 0;
-    height: 6em;
-    position: fixed;
-    float: right;
-    border-left: none;
-    border-right: none;
-    border-top: 1px solid rgba(210, 210, 210, 0.2);
-    background-color: rgba(251, 251, 251, 0);
-    margin-left: 40%;
-    display: inline-block;
-    width: 60%;
+  height: 6em;
+      right: 0px;
+      position: fixed;
+      background-color: rgb(4, 0, 0);
+      display: inline-block;
+      width: 40%;
+      top: 2em;
+      color: white;
+      border-bottom: 1px solid #212121;
 }
 
 #imagehover {
@@ -2196,12 +2501,12 @@ width: 80%;
 }
 
 #mediatab {
-	font-family: "San Francisco Text";
-	    font-weight: 600;
-	    margin-left: 20%;
-	    font-size: .9em;
-	    position: fixed;
-	    margin-top: 1.2em;
+  font-family: "San Francisco Text";
+  font-weight: 600;
+  margin-left: 15%;
+  font-size: .9em;
+  margin-top: 3.2em;
+  display: inline-block;
 }
 
 
@@ -2246,31 +2551,36 @@ width: 80%;
 }
 
 #title {
-    font-family: "San-Francisco";
-    font-size: 130%;
-    font-weight: 300;
-    float: left;
-    padding-top: .2em;
-    color: black;
+  font-family: "San-Francisco";
+  font-size: 1.7em;
+  font-weight: 300;
+  padding-top: .2em;
+  color: black;
+  margin-top: .4em;
+  float: right;
+  margin-right: 6em;
+  letter-spacing: .15em;
 }
 
 
 
 	#buydarkfeed {
-		font-family: "San Francisco Text";
-    color: rgb(0, 0, 0);
-    border: 1px solid rgb(0, 0, 0);
-    margin-top: .000005em;
-    background-color: white;
-    font-size: .6em;
-    font-weight: 600;
-    letter-spacing: .2em;
-    padding-bottom: .7em;
-    bottom: 0em;
-    padding-top: .7em;
-    float: right;
-    margin-right: 16%;
-    width: 20%;
+    font-family: "Open Sans";
+        padding-left: 3em;
+        margin-left: 64%;
+        float: right;
+        padding-right: 3em;
+        color: rgb(58, 97, 70);
+        border: 4px solid rgb(58, 97, 70);
+        background-color: rgba(58, 97, 70, 0);
+        font-size: .9em;
+        border-radius: 3px;
+        font-weight: 600;
+        letter-spacing: .3em;
+        bottom: 0em;
+        padding-top: .8em;
+        margin-right: 4%;
+        padding-bottom: .8em;
 }
 
 #accountstream {

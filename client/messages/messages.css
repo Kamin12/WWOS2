@@ -1,0 +1,344 @@
+#closecurrent {
+  right: 0px;
+  top: 0px;
+  border: 1px solid black;
+  color: white;
+  position: fixed;
+  padding: 1em;
+  background-color: black;
+  margin-top: 4em;
+}
+
+#backmessage {
+padding: 1em;
+background-color: black;
+color: white;
+}
+
+#current {
+  color: black;
+  margin-left: 30em;
+}
+
+#Tooo {
+  margin-top: 5.2em;
+  position: fixed;
+  color: black;
+}
+
+
+#calltologin {
+  font-family: "San Francisco Text";
+    color: white;
+    margin-top: 18em;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.35);
+    width: 10%;
+    text-align: center;
+    padding: 1em;
+    display: inline-block;
+    margin-left: 50%;
+    border-radius: 10px;
+    border: 1px solid white;
+}
+
+#tooo {
+  margin-top: 5em;
+      position: fixed;
+}
+
+#messagenavigator {
+position: fixed;
+margin-top: 5em;
+font-family: "San Francisco Text";
+}
+
+#creategroup {
+  color: #ffffff;
+  margin-top: 4.7em;
+  right: 0px;
+  z-index: 1000000000000000;
+  background-color: rgba(0, 7, 56, 0.98);
+  position: fixed;
+  border: 1px solid rgba(0, 7, 56, 0.98);
+  padding-top: .5em;
+  padding-bottom: .5em;
+  padding-left: .5em;
+  padding-right: .5em;
+}
+
+#messageee {
+  font-family: "San Francisco Text";
+    color: black;
+    position: fixed;
+    display: inline-block;
+    z-index: 1000000000000000000000000000000;
+    margin-top: 8.2em;
+    margin-left: -8em;
+    padding-top: 1.8em;
+}
+
+.close3 {
+  color: #ffffff;
+  z-index: 1000000000000000000000000000;
+  border-radius: 2px;
+  float: right;
+  position: fixed;
+  width: 15%;
+  text-align: center;
+  margin-right: 1em;
+  font-size: .8em;
+  background-color: rgb(0, 0, 0);
+  border: rgba(78, 0, 0, 0.42);
+  padding-top: .5em;
+  padding-bottom: .5em;
+  margin-top: 5.39%;
+  right: 0px;
+  margin-left: .1%;
+  font-family: "San Francisco Text";
+  letter-spacing: 15px;
+}
+
+.close5{
+  color: #ffffff;
+  z-index: 1000000000000000000000000000;
+  display: block;
+  top: 0px;
+  width: 9.9%;
+  background-color: rgba(8, 154, 179, 0.58);
+  padding-top: .5em;
+  padding-bottom: .5em;
+  margin-top: 5.7%;
+  margin-left: 2.5%;
+  position: fixed;
+  font-family: "San Francisco Text";
+  padding-left: 4em;
+  padding-right: 5.5em;
+}
+
+.close4{
+  color: #616161;
+  z-index: 1000000000000000000000000000;
+  width: 12%;
+  float: right;
+  margin-right: 2%;
+  right: 0px;
+  text-align: center;
+  top: 0px;
+  border-radius: 5px;
+  border: 1px solid #888888;
+  background-color: rgba(254, 255, 255, 0.98);
+  margin-top: 6.7%;
+  position: fixed;
+  font-family: "San Francisco Text";
+  padding-left: 4em;
+  padding-right: 5.5em;
+  padding-bottom: .4em;
+  padding-top: .4em;
+}
+
+
+#calltosignup {
+  font-family: "San Francisco Text";
+    color: white;
+    margin-top: 18em;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.35);
+    width: 10%;
+    text-align: center;
+    padding: 1em;
+    display: inline-block;
+    margin-left: 35%;
+    border-radius: 10px;
+    border: 1px solid white;
+}
+
+#createaamessage: hover {
+  background-color: white;
+width: 14.9%;
+font-family: "San Francisco Text";
+font-size: 1em;
+color: white;
+display: inline-block;
+position: absolute;
+padding-right: .4em;
+z-index: 10000000000;
+color: black;
+margin-top: .2em;
+padding-top: .6em;
+padding-bottom: .6em;
+border: 1px solid white;
+letter-spacing: .3em;
+text-align: center;
+font-size: .8em;
+margin-left: 52%;
+}
+
+#send2{
+  padding-top: 1.2em;
+  padding-bottom: 1.2em;
+  width: 100%;
+  bottom: 0px;
+  border: none;
+  background-color: rgb(0, 82, 48);
+  color: rgb(255, 255, 255);
+  font-family: "San Francisco Text";
+  font-size: .8em;
+  right: 0px;
+  position: fixed;
+  z-index: 10000000000000000000000000000;
+  letter-spacing: .4em;
+  margin-bottom: 3.8em;
+}
+
+#addmessages {
+  font-family: "San Francisco Text";
+  background-color: rgb(0, 29, 24);
+  padding-top: 1.2em;
+  letter-spacing: 15px;
+  font-size: .85em;
+  margin-bottom: 4.5em;
+  font-weight: 300;
+  border: 1px solid #cecece;
+  color: #fefefe;
+  position: fixed;
+  bottom: 0px;
+  padding-bottom: 1.2em;
+  width: 100%;
+  text-align: center;
+}
+
+#nomessages {
+  font-family: "San Francisco Text";
+  margin-top: 12em;
+  color: #000000;
+  text-align: -webkit-center;
+  width: 100%;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+#messageslabel {
+  color: rgb(0, 0, 0);
+  font-family: "San Francisco Text";
+  text-transform: uppercase;
+  border: 1px solid rgba(0, 0, 0, 0);
+  top: 0px;
+  width: 100%;
+  text-align: center;
+  margin-top: 4.4em;
+  position: fixed;
+  padding-right: 12em;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  letter-spacing: .3em;
+  display: inline-block;
+  border-radius: 4px;
+  font-size: 1em;
+  z-index: 100000000000000000000000000000;
+}
+
+#newmessagelabel {
+  color: rgb(0, 0, 0);
+  font-family: "San Francisco Text";
+  text-transform: uppercase;
+  position: absolute;
+  border: 1px solid rgba(0, 0, 0, 0);
+  padding-left: 12em;
+  margin-left: 40%;
+  padding-right: 12em;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  letter-spacing: .3em;
+  background-color: rgba(0, 0, 0, 0.02);
+  margin-top: .5em;
+  display: inline-block;
+  border-radius: 4px;
+  font-size: .8em;
+  z-index: 10000000000000000000000000000000000;
+}
+
+#newmessage {
+  color: #ffffff;
+    z-index: 1000000000000000000000000000;
+    display: block;
+    position: fixed;
+    width: 70%;
+    height: 94%;
+    margin-left: 22.6%;
+    border: 1px solid #e2e2e2;
+    top: 0px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 8.5%;
+    font-family: "San Francisco Text";
+    padding-left: 4em;
+    padding-right: 4em;
+    padding-bottom: .4em;
+    padding-top: .4em;
+}
+
+#tomessage {
+	padding-bottom: 1em;
+	padding-top: 1em;
+	width: 60%;
+	letter-spacing: .1em;
+	border-left: sienna;
+	border-right: none;
+	border-top: none;
+	margin-left: 2em;
+	border-bottom: none;
+	margin-top: 4.2em;
+	font-weight: 300;
+	position: fixed;
+	z-index: 10000000;
+	margin-bottom: .3em;
+	display: inline-block;
+	background-color: rgba(255, 255, 255, 0.73);
+	color: rgb(0, 0, 0);
+	font-size: 1em;
+	font-family: "San Francisco Text";
+}
+
+#tooo{
+  margin-top: 5em;
+position: fixed;
+color: black;
+}
+
+#attach {
+  padding-top: 1.2em;
+  padding-bottom: 1.2em;
+  width: 22.8%;
+  bottom: 0px;
+  border: none;
+  background-color: rgb(0, 4, 56);
+  color: rgb(255, 255, 255);
+  font-family: "San Francisco Text";
+  font-size: .8em;
+  position: fixed;
+  left: 0px;
+  margin-left: 22.4%;
+  z-index: 10000000000000000000000000000;
+  letter-spacing: .4em;
+  text-align: center;
+}
+
+#newmessaging {
+	width: 60%;
+	border-bottom: none;
+	border-left: none;
+	border-top: none;
+	letter-spacing: .05em;
+	border-right: none;
+	padding-top: .4em;
+	position: fixed;
+	padding-bottom: .3em;
+	margin-top: 5em;
+	z-index: 1000000000;
+	font-weight: 300;
+	display: block;
+	color: rgb(0, 0, 0);
+	background-color: rgb(255, 255, 255);
+	font-size: 1.6em;
+	font-family: "San Francisco Text";
+}

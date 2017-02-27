@@ -22,17 +22,25 @@
 }
 
 
-.close {
+
+
+.close2 {
   font-family: "San Francisco Text";
-    border: 1px solid #F9F9F9;
-    padding-top: .3em;
-    color: gainsboro;
-    padding-right: .8em;
-    padding-left: .8em;
-    padding-bottom: .3em;
-    border-radius: 100px;
+      border: 1px solid #f7f7f7;
+      padding-top: .3em;
+      background-color: rgba(0, 0, 0, 0);
+      color: white;
+      display: inline-block;
+      width: 1%;
+      font-weight: 300;
+      margin-top: .3em;
+      margin-left: .3em;
+      padding-right: .8em;
+      padding-left: .8em;
+      padding-bottom: .3em;
+      border-radius: 5px;
 }
-}
+
 
 /* Modal Content/Box */
 

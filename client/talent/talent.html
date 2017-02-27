@@ -1,11 +1,154 @@
-<template name="Talent">
-{{#each users}}
-{{>TalentComponent}}
-{{/each}}
+<!--
+<template name="Directory">
+  <form class="form-inline" id="searchForm">
+    <input name="name_filter" type="text" placeholder="General" id="posnopp">
+    <input name="location_filter" type="text" placeholder="Location" id="locnopp" >
+    {{> esAutosuggest index="skills" placeholder="Field" renderValue="autosuggestValues" renderSuggestion="suggestionTpl" id="fieldsearch"}}
+    <button type="submit" id="searchopp">Search</button>
+  </form>
+  <table style="width:100%" class="directory_table">
+    {{#each users}}
+    <tr>
+      <td colspan="3">
+
+        <div class="directory_profile_files" style="width:648px; margin: auto">
+          {{#each files}} {{#if isImage this.original.name }}
+          <img width="200" height="200" src="{{this.url}}"> {{/if}} {{#if isAudio this.original.name }}
+          <div>
+            <audio controls>
+              <source src="{{this.url}}" type="audio/mp3">
+            </audio>
+          </div>
+          {{/if}} {{#if isVideo this.original.name }}
+          <div>
+            <video controls crossorigin>
+              <source src="{{this.url}}" type="video/mp4">
+            </video>
+          </div>
+          {{/if}} {{/each}}
+        </div>
+
+      </td>
+    </tr>
+    <tr class="directory_profile_info">
+      <td style="width:50%; text-align:right">
+        <div>
+          {{#each profilepic}}
+          <img src="{{this.url}}" alt="" class="propic" height="60" width="60" /> {{/each}}
+        </div>
+      </td>
+      <td style="min-width:300px !important">
+        <div>
+          <a href="/member/{{_id}}/profile" class="profiles" uid={{usrid}}>
+            <h2>{{profile.fname}} {{profile.lname}}</h2>
+          </a>
+        </div>
+      </td>
+      <td style="width:50%">
+        <button type="button" alt="Book!" id="book" data-toggle="modal" data-target="#inquiryModal"></button>
+        <button type="button" alt="Subscribe" id="subscribe"></button>
+        <div>
+          <p>SEE MORE</p>
+          <p>{{ getFirstSkill profile.skillset }}</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <div class="directory_tags"></div>
+      </td>
+    </tr>
+    {{/each}}
+  </table>
+  {{> pmod}}
+  {{>InquiryModal}}
 </template>
 
 
-<template name="TalentComponent">
-<a id="usern">{{username}}</a>
-<a id="location">{{location}}</a>
+
+<template name="Network">
+  <div class="main_container">
+    <section class="header">
+      <img src="" />
+      <div id="fade"></div>
+    </section>
+    <div id="network_nav">
+      <ul class="nav nav-pills nav-justified" role="tablist">
+        <li role="presentation"><a href="#eventTab" aria-controls="product" role="tab" data-toggle="tab">Events</a></li>
+        <li role="presentation"><a href="#InquiriesTab" aria-controls="album" role="tab" data-toggle="tab">Inquiries</a></li>
+      </ul>
+    </div>
+    <div class="tab-content">
+      <div class="tab-pane active" role="tabpanel" id="directoryTab">
+        {{>Directory}}
+      </div>
+      <div class="tab-pane" role="tabpanel" id="eventTab">
+        {{>Events}}
+      </div>
+      <div class="tab-pane" role="tabpanel" id="InquiriesTab">
+        {{>Inquiries}}
+      </div>
+    </div>
+  </div>
 </template>
+
+<template name="Inquiries">
+<div class="main_container">
+  <div>
+  <h1 class="maintag">BOOK ARTISTS AND CREATIVE TALENT</h1>
+  <h1 class ="subtag">FROM COMMISSIONS AND PERFORMANCES, TO GLOBAL BRAND COLLABORATIONS</h1>
+</div>
+  <div id="network_nav">
+  <ul class="nav nav-pills nav-justified" role="tablist">
+    <li role="presentation"><a href="#browseopp" data-toggle="tab">OPEN REQUESTS</a></li>
+    <li role="presentation"><a href="#newopp" data-toggle="tab">REQUEST TALENT</a></li>
+  </ul>
+</div>
+  <div class="tab-content">
+    <div class="tab-pane active" role="tabpanel" id="browseopp">
+      <input type="text" placeholder="Field" id="posnopp" />
+      <span class="glyphicon glyphicon-user form-control-feedback"></span>
+      <input type="text" placeholder="Location" id="locnopp" />
+      <button id="searchopp">Search</button>
+      <table>
+        {{#each opp}}
+        <tr>
+          <td>{{#each pictureof createdBy}}
+            <img src="{{this.url}}" class="pp">{{/each}}</td>
+          <td>
+            <div>{{nameof createdBy}}, {{organization}}</div>
+            <div>{{location}}</div>
+            <br>{{position}}</td>
+          <td>${{payment}}
+            <br>{{equity}}%</td>
+        </tr>
+        {{/each}}
+      </table>
+    </div>
+    <div class="tab-pane active" role="tabpanel" id="newopp">
+      Position:
+      <br>
+      <input type="text" id="posn" />
+      <br> Organization:
+      <br>
+      <input type="text" id="org" />
+      <br> Location:
+      <br>
+      <input type="text" id="locn" />
+      <br> Payment:
+      <br>
+      <input type="text" id="payment" />
+      <br> Equity:
+      <br>
+      <input type="text" id="equity" />
+      <br>
+      <br>
+      <button id="listopp">Add Inquiry</button>
+    </div>
+    <div class="tab-pane active" role="tabpanel" id="directoryTab">
+      {{>Directory}}
+    </div>
+  </div>
+</div>
+</template>
+-->

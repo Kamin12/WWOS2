@@ -1,0 +1,53 @@
+<!-- VIDEO FEED -->
+
+<template name="VideoFeed">
+  <div id="music_feed_bg">
+     <video id="video">
+       <source src="" type="video/mp4">
+       </video>
+  {{#each video in videos}}
+      {{>VideoItem video=video}}
+  {{/each}}
+</div>
+</template>
+
+<!-- VIDEO ITEM -->
+
+<template name="VideoItem">
+    <div id="image_div">
+        <div class="music_info_image" href="/{{pathforVideoStream}}"></div>{{video.videoimage}}
+        <div class="like_button_dark" style="margin-left:30%;"><p class="music_info_buttons_text"> LIKE </p></div>
+        <div class="save_button_dark"><p class="music_info_buttons_text"> SAVE </p></div>
+        <div class="share_button_dark"><p class="music_info_buttons_text"> SHARE </p></div>
+        <div class="song_title" style="float:left;" href="/{{pathforVideoStream}}"><p>{{video.videotitle}}</p></div>
+        <div class="song_title" style="float:left;"><p>{{video.videovideo}}</p></div>
+        <div class="creator_name" colspan="4"><p>{{video.videomember}}</p> </div>
+      </div>
+</template>
+
+
+<template name="StreamVideo">
+{{#each videoTitle in videoContext}}
+{{>StreamVideoReusable (videoArgs videoTitle)}}
+{{/each}}
+</template>
+
+
+<template name="StreamVideoReusable">
+<div id="VideoInformation">
+          <img src="{{profilePic.url}}" width="42" height="42" class="inline">
+          <p id="VideoCreator">{{video.videomember}}</p>
+          <p id="VideoTitle">{{video.videotitle}}</p>
+</div>
+    <div class="video_overlay">
+          <video width="605" controls autoplay class="video_display" id="media">
+            <source src="{{this.url}}" type="{{original.type}}">
+          </video>
+      </div>
+      <div id="VideoInformationTwo">
+        <p id="VideoViews">Test</p>
+        <p id="VideoMembers">Test</p>
+        <p id="VideoDate">Test</p>
+        <p id="VideoLocation"> Test</p>
+      </div>
+  </template>

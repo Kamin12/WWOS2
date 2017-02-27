@@ -1,0 +1,53 @@
+<!-- TEXT FEED -->
+<!-- TEXT FEED -->
+<!-- TEXT FEED -->
+
+<template name="TextFeed">
+    <div id="music_feed_bg">
+        {{#each text in texts}}
+            {{>TextItem (textArgs text)}}
+        {{/each}}
+    </div>
+  </template>
+
+  <!-- TEXT ITEM -->
+	<!-- TEXT ITEM -->
+	<!-- TEXT ITEM -->
+
+
+  <template name="TextItem">
+      <div id="image_div">
+            <p class="normal" style="float:left;"> {{text.textdate}}</p>
+          <div class="music_info_image" href="/{{pathforTextStream}}">{{text.textimage}}</div>
+          <div class="like_button_dark" style="margin-left:30%;"><p class="music_info_buttons_text"> LIKE </p></div>
+          <div class="save_button_dark"><p class="music_info_buttons_text"> SAVE </p></div>
+          <div class="share_button_dark"><p class="music_info_buttons_text"> SHARE </p></div>
+          <div class="song_title" style="float:left;" href="/{{pathforTextStream}}"><p>{{text.texttitle}}</p></div>
+          <div class="creator_name" colspan="4"><p>{{text.textmember}}</p> </div>
+        </div>
+  </template>
+
+	<!-- TEXT STREAM-->
+	<!-- TEXT STREAM -->
+	<!-- TEXT STREAM -->
+
+	<template name="StreamText">
+    {{#each textTitle in textContext}}
+  {{>StreamTextReusable (textArgs textTitle)}}
+   {{/each}}
+	</template>
+
+
+  <template name="StreamTextReusable">
+  <div class="article_header">
+    <p class="article_title">{{text.texttitle}}</p>
+    <div class="article_creator">
+      <p class="inline article_creator">{{text.textmember}}</p>
+    </div>
+  </div>
+  <div class="article_content">
+  {{text.texttext}}
+  </div>
+  <div class="article_footer">
+  </div>
+ </template>

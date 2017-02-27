@@ -1,0 +1,94 @@
+<template name="Sidebar">
+<ul id="recentmess">
+{{#each message in messages}}
+{{>SideMessage message=message}}
+{{/each}}
+</ul>
+</template>
+
+<template name="SideMessage">
+    <img src="{{message.Avatar}}">
+    <a id="ChannelDestination"> {{message.Destination}}</a>
+    <a></a>
+</template>
+
+<template name="MyMessages">
+<div id='messageswhole'>
+<span class="close3"> CLOSE X </span>
+<a id='messageslabel'> MY MESSAGES </a>
+<div id="conversation" class="conversationn" name="conversation">
+</div>
+{{#if NotLoggedIn}}
+<div class="master-navbartwo1"></div>
+<div class="master-navbarthree1"></div>
+<div class="master-navbar"></div>
+<div class="modal35" id="messagesModal">
+<a id="calltojoin"> Login is Required to Message Members. </a>
+<a id="calltosignup" href="/sign-up"> SIGN UP </a>
+<a id='calltologin' href="/sign-in">SIGN IN </a>
+</div>
+{{else}}
+<div class="modal4" id="messagesModalll">
+{{>YourMessages}}
+</div>
+{{/if}}
+</div>
+</template>
+
+<template name="YourMessages">
+<div id="conversation" class="conversationn" name="conversationn">
+</div>
+{{#each message in messages}}
+{{>Message message=message}}
+{{>Sidebar}}
+<a class="newmessage">NEW MESSAGE</a>
+<div class="message-input">
+   <input name="message" placeholder="Type your message here...">
+    <input id="attach" type="file" placeholder="ATTACH"><button type="submit" id="send2" placeholder="Enter Message..." href="/mymessages"> SEND </button>
+ </div>
+{{else}}
+<p id="nomessages">You have no messages. </p>
+<p id="addmessages" href="/newmessage"> CREATE MESSAGE </p>
+{{/each}}
+</template>
+
+ <template name="NewMessage">
+{{>Sidebar}}
+<div id="messagenavigator"> <a id='backmessage'> BACK </a><a id='current'> New Message </a><a id='closecurrent'> X </a></div>
+{{>RealNewMessage}}
+ </template>
+
+ <template name="RealNewMessage">
+   <div id="createnewmessage">
+   <form id="newmessage">
+   <a>{{currentUser}}</a>
+   <label id="Tooo">To</label><input id="tomessage" placeholder="Enter Username..."><a id="creategroup">CREATE GROUP</a>
+   <input id="newmessaging" placeholder="Begin Typing Message">
+   {{>uploadForm}}
+   <input id="attach" type="file" placeholder="ATTACH"><button type="submit" id="send2" placeholder="Enter Message..." href="/mymessages"> SEND </button>
+   </form>
+   </div>
+ </template>
+
+<template name="uploadForm">
+{{#with currentUpload}}
+  Uploading <b>{{file.name}}</b>:
+  <span id="progress">{{progress.get}}%</span>
+{{/with}}
+</template>
+
+
+ <template name="Message">
+<img src="imageimageee">
+<a id="membertexttt"> {{message.Member}} </a>
+<a id="messagetexttt"> {{message.Message}} </a>
+ </template>
+
+<template name="CreateGroup">
+<form id="CreateNewGroup" >
+<input id='addgroupname' placeholder="Create Group Name">
+<label> ADD MEMBERS </label>
+<input id='searchformembers' placeholder="Enter Username"><a id="addgroupuser">ADD</a>
+<button>CREATE</button>
+</form>
+</template>

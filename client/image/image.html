@@ -1,0 +1,45 @@
+<!-- IMAGES FEED -->
+
+  <template name="ImageFeed">
+         <div id="images_feed_bg">
+             {{#each image in images}}
+                 {{>ImageItem image=image}}
+             {{/each}}
+         </div>
+  </template>
+
+<!-- IMAGES ITEM -->
+
+<template name="ImageItem">
+    <div id="image_div">
+          <p class="normal" style="float:left;"> {{image.imagedate}}</p>
+          <p class="normal" style="float:left;"> {{image.imageimage}}</p>
+        <div class="like_button_dark" style="margin-left:30%;"><p class="music_info_buttons_text"> LIKE </p></div>
+        <div class="save_button_dark"><p class="music_info_buttons_text"> SAVE </p></div>
+        <div class="share_button_dark"><p class="music_info_buttons_text"> SHARE </p></div>
+        <div class="song_title" style="float:left;"><p>{{image.imagetitle}}</p></div>
+      </div>
+</template>
+
+<template name="StreamImage">
+{{#each imageTitle in imageContext }}
+{{>StreamImageReusable (imageArgs imageTitle)}}
+{{/each}}
+</template>
+
+  <template name="StreamImageReusable">
+	<div class="image_head">
+	<img height="430" src="{{this.url}}">
+	<p class="image_title">{{image.imagetitle}}</p>
+	<p colspan="4" class="music_info_text3" style="float:left;">{{image.imagetext}}</p>
+  <img src="{{image.media}}" width="300" height="300" class="inline">
+  <p class="inline image_creator">{{image.imagemember}}</p>
+	</div>
+	<p class="music_info_text2"> {{image.imagemembers}} </p>
+  <img src="{{profilePic.url}}" width="42" height="42" class="inline">
+	<p class="date_text_dark"> {{image.imagedate}}</p>
+  <br>
+	<div>
+		{{>CommentArea}}
+	</div>
+</template>

@@ -1,0 +1,152 @@
+<template name="Market">
+<ul>
+  {{#each product in products}}
+    {{>Product (prodArgs productTitle)}}
+  {{/each}}
+</ul>
+</template>
+
+<template name="Product">
+<div href="/{{id}}" id="Images">
+  <img href="/{{id}}" id="picture" src="{{product.productimage}}">
+</div>
+<div id="sweatshirtinfo">
+  <button data-choice="Rightside" href="" id="lovebutton"><a id="commentscount"></a> LOVE</button>
+  <button data-choice="Rightside" href="" id="buydarkfeed"><a id="price"></a> BUY</button>
+  <a href="/{{Account}}" id="account"> {{product.productmember}} </a>
+  <a href="/{{Title}}" id="title"> {{product.producttitle}} </a>
+</div>
+</template>
+
+<template name="StreamProductMain">
+<a id="canEdit"> EDIT </a>
+{{#each productTitle in productTitleArray}}
+ {{> StreamProduct1 (productArgs productTitle) }}
+{{else}}
+ {{> Member_notFound}}
+{{/each}}
+</template>
+
+<template name="Member_notFound">
+<div>
+No member has been found with the name of. Click to create that.
+</div>
+</template>
+
+
+<template name="Product_notFound">
+<div>
+No product has been found with the name of. Click here to create one.
+</div>
+</template>
+
+
+<template name="StreamProduct1">
+<div id="streamproductcontainer">
+
+  <div id="mediacontainer">
+    <div class="{{leftarrowhelper}}" id="leftarrowstyle">
+      <svg enable-background="new 0 0 1000 1000" id="leftarrowicon" version="1.1" viewBox="0 0 1000 1000" x="0px" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" y="0px">
+       <g>
+            <path d="M605.3,908.4l-343.4-412l343.4-412c15.2-18.2,12.7-45.3-5.5-60.5s-45.3-12.7-60.5,5.5L172.9,468.9c-6.7,8-10,17.7-10,27.5
+    		    c0,9.8,3.3,19.6,10,27.5l366.3,439.5c15.2,18.2,42.3,20.7,60.5,5.5C618,953.6,620.5,926.6,605.3,908.4z"/>
+      </g>
+    </svg>
+  </div>
+  <img id="mainimages" src="{{mainimagehref}}">
+    <div class="{{rightarrowhelper}}" id="rightarrowstyle">
+      <svg enable-background="new 0 0 1000 1000" id="rightarrowicon" version="1.1" viewBox="0 0 1000 1000" x="0px" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" y="0px">
+        <g>
+          <path
+            d="M846.2,464.2l-431-439.1c-17.8-18.2-49.7-20.7-71.1-5.5c-21.5,15.2-24.4,42.2-6.5,60.4l404.1,411.6L337.6,903.3
+        c-17.8,18.2-14.9,45.2,6.5,60.4c21.4,15.2,53.3,12.7,71.1-5.5l431-439.1c7.9-8,11.8-17.8,11.8-27.5
+        C858,481.9,854.1,472.2,846.2,464.2z"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</div>
+</template>
+
+<template name="AboutProduct">
+  <div id="aboutcontainer">
+    <p id="accountid">
+      Creators:
+    </p>
+    <img id="accountimage1" src="{{creatorimage}}">
+    <p id="accounttextid">
+    </p>
+    <img id="aboutaccountimage2" src="">
+    <p id="accounttextid">
+    </p>
+    <img id="aboutaccounimage3" src="">
+    <p id="shippingid">
+      Shipping:
+    </p>
+    <p id="shippingtextid">
+      This item will ship within {{product.productshiptime}} or your order.
+    </p>
+  </div>
+</template>
+
+<template name="ProductNavigator">
+<div id="streamnavigatorone">
+  <a id="accountstream">{{product.productmember}}
+  </a>
+  <a id="titlestream">
+{{product.producttitle}}  </a>
+</div>
+<div id="streamnavigatortwo">
+  <a href="" id="buybuttonnavigator">
+    BUY </a>
+    <span id="pricey">
+{{product.productprice}}    </span>
+  <a id="mediatab">
+    MEDIA
+  </a>
+  <a id="abouttab">
+    DETAILS
+  </a>
+</div>
+</template>
+
+<!--
+<template name="commenting">
+  <input id="newcommenting" placeholder="Enter Comment...">
+</template>
+-->
+
+<template name="ProductCloud">
+<div> Cloud </div>
+<ul class="nav nav-pills">
+   <li data-template="Products" role="presentation" class="active"><a href="#">Products</a></li>
+   <li data-template="Orders" role="presentation"><a href="#">Orders</a></li>
+</ul>
+{{> Template.dynamic template=tab}}
+</template>
+
+<template name="YourOrders">
+  {{#each yourorder in yourorders}}
+    {{> YourOrder (yourOrderArgs yourorder)}}
+  {{/each}}
+</template>
+
+<template name="YourOrder">
+<p>{{order.name}}</p>
+<p>{{order.item}}</p>
+<p>{{order.email}}</p>
+<p>{{order.createdAt}}</p>
+</template>
+
+<template name="YourProducts">
+  {{#each product yourproducts}}
+     {{>YourProduct (yourProductArgs product)}}
+   {{/each}}
+</template>
+
+<template name="YourProduct">
+  <li>
+     <p>{{product.producttitle}}</p>
+     <p>{{product.productprice}}</p>
+   </li>
+</template>

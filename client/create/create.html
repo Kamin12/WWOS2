@@ -1,0 +1,226 @@
+
+<template name ="Create">
+<div class="modal2" id="myModal">
+<a class="close" href="/home">x</a>
+<a id="ProductSelection"> Create </a>
+<ul class="modal-content">
+<a id="ProductSelection2" href="/createproduct"> Product  </a>
+<a id="AudioSelection" href="/createaudio"> Audio </a>
+<a id="VideoSelection" href="/createvideo"> Video </a>
+<a id="TextSelection" href="/createtext"> Text </a>
+<a id="ImageSelection" href="/createimage"> Image </a>
+<a id="RequestSelection" href="/createbooking"> Request </a>
+</ul>
+</div>
+</template>
+
+<template name="CreateNavigator">
+  <div id="createnav">
+  <a class="back" href="/create"> CREATE MENU </a>
+  <a id="ProductSelection"> {{currentForm}}</a>
+  <a class="close">x</a>
+</div>
+</template>
+
+<template name="CreateProject">
+    <form class="addProject">
+        <div id="projimages">
+        <input class="file fileInput" name="MediaProject" id="projectImg" type="file" accept=".jpg" /><br/>
+       </div>
+        Title: <input name="TitleProject" type="text" placeholder="Project Title" id="projectTitle" class="title"/><br/>
+        Description: <input name="TextProject" id="productdescription" type="text" placeholder="Describe Your Product"/><br/>
+        Location: <input name="LocationProject" id="productdescription" type="text" placeholder="Describe Your Product"/><br/>
+      <br/>
+      <fieldset id="TimeandMoney">
+        Project Start: <input name="StartProject" type="text" placeholder="Project Start" id="projectTitle" class="title"/><br/>
+        Project End: <input name="EndProject" type="text" placeholder="Project End" id="projectTitle" class="title"/><br/>
+      <br/>
+      </fieldset>
+      <br/>
+    <div id="lowerlowernav">
+  <a id="{{back}}" class="formback"> BACK </a> <a id="{{next}}" class="formnext"> NEXT </a>
+    </div>
+      <input id="shareproduct" type="submit" value="SHARE"/><br/>
+    </form>
+</template>
+
+<template name="CreateProduct">
+  {{> CreateNavigator}}
+    <form class="addProduct">
+        <input id="mediaproductt" name="MediaProduct" type="file" placeholder="Upload Media Items"/><br/>
+        <br>
+        <input name="TitleProduct" type="text" placeholder="Enter Product Title" id="productTitle" class="title"/><br/>
+        <input name="TextProduct" id="productdescription" type="text" placeholder="Enter Product Description"/><br/>
+      <br>
+      <input name="PriceProduct" id="productprice" type="text" placeholder="Enter Product Price"/>
+      <br>
+      <input name="ShipPriceProduct" type="text" id="shipment-option-cost" class="form-control" placeholder="Enter Shipping Price" />
+      <br>
+      <input name="ShipTimeProduct" type="text" id="shipment-option-time" class="form-control" placeholder="Enter Delivery Time" />
+      <br>
+      <input name="AddSearchMembers" type="text" id="addsearchmembers" placeholder="Search to Add Members.." /> <a id="addmembbutton"> ADD </a>
+      <br>
+    <div>  </div>
+
+
+
+
+      <button id="productlocationbutton" type=”button” name="LocationText" value=”Location”>ADD LOCATION</button>
+      <br>
+      <img src="{{memberimage}}" />
+      <button id="shareproduct" type="submit"> CREATE </button>
+    </form>
+</template>
+
+<!-- CREATE VIDEO -->
+<!-- CREATE VIDEO -->
+<!-- CREATE VIDEO -->
+
+<template name="CreateVideo" >
+  {{> CreateNavigator}}
+<form id="CreateVideoForm">
+<input name="VideoVideo" type="file"  accept="video/*"  id="VideoFile"  placeholder="Add Video"/>
+<br>
+<input name="TitleVideo" type="text"  id="VideoTitle"  placeholder="Add a Title">
+<br>
+<textarea name="TextVideo" id="VideoText"  placeholder="Add Text..."></textarea>
+<br>
+<input name="MembersVideo" id="VideoCreator" type="text"  placeholder="Search to Add Members">
+<br>
+<button id="videolocationbutton" type=”button” name="LocationText" value=”Location”>ADD LOCATION</button>
+
+<button id="CreateVideo" type="submit" class="btn btn-success">PUBLISH</button>
+</form>
+</template>
+
+
+<!-- CREATE TEXT -->
+<!-- CREATE TEXT -->
+<!-- CREATE TEXT -->
+<template name="CreateText">
+  {{> CreateNavigator}}
+<form id="CreateText" method="post">
+<div class="article_container">
+<img id="textcreatordisplay" src=""/>
+<input type="text" id="TextTitle" name="TitleText" placeholder="Add a Title.">
+<br>
+<textarea id="TextText" name="TextText" placeholder="Add Text..."></textarea>
+<a id="textlocationbutton" name="LocationText" value=”Location”>ADD LOCATION</a>
+{{#if locationvisual}}
+<a>{{location}}</a><a>x</a>
+{{/if}}
+<button id="createtextbutton" type="submit" class="btn btn-success">PUBLISH</button>
+</div>
+</form>
+</template>
+
+<template name="CreateBooking">
+  {{> CreateNavigator}}
+<form id="CreateText" method="post">
+<div class="article_container">
+<img id="textcreatordisplay" src=""/>
+<a>{{Member}} is inquiring about</a>
+<input type="text" id="TextTitle" name="TitleText" placeholder="Enter Fields">
+<a>for</a>
+<textarea id="TextText" name="TextText" placeholder="Enter Amount"></textarea>
+<!--
+{{#if locationvisual}}
+<input type="text" id="TextTitle" name="TitleText" placeholder="Enter Location">
+{{#else}}
+<button id="textlocationbutton" type=”button” name="LocationText" value=”Location”>ADD LOCATION</button>
+{{/if}}
+-->
+<button id="createtextbutton" type="submit" class="btn btn-success">CREATE</button>
+</div>
+</form>
+</template>
+
+
+
+<!-- CREATE IMAGE -->
+<!-- CREATE IMAGE -->
+<template name="CreateImage">
+  {{> CreateNavigator}}
+<form id=”createimage”>
+<input name="ImageImage" type="file" accept="video/*"  id="ImageFile"  placeholder="Upload Image(s)">
+<br>
+<input name="ImageTitle" type="text" colspan="4"  id="ImageTitle" placeholder="Add Title...">
+<br>
+<textarea name="TextImage" id="ImageText"  placeholder="Add Text..."></textarea>
+<br>
+<input name="MemberImage" type="text" colspan="4"  id="userviacreate" placeholder="Search for Members">
+<br>
+<button id="createimage" type="submit" class="btn btn-success">CREATE</button>
+</form>
+</template>
+
+
+<!-- CREATE AUDIO -->
+<!-- CREATE AUDIO -->
+<!-- CREATE AUDIO -->
+<template name="CreateAudio">
+{{> CreateNavigator}}
+<form id=”createaudio”>
+<!-- Audio Title -->
+<input name="TitleAudio" type="text" id="AudioTitle" placeholder="Add a Title">
+<div id="music_info_image" style="display:inline-block;">
+<!-- Audio Image -->
+<input name="ImageAudio" placeholder= "Add an Image" id="AudioImage"   type="file" accept="image/*">
+<!-- Audio File -->
+<p style="text-align:center;">Click below to add audio files </p>
+<input name="AudioAudio" type="file" accept="audio/*"  id="AudioFile" >
+</div>
+<input name="TextAudio" id="AudioText"  placeholder="Add Text">
+<br>
+<button id="audiolocationbutton" type=”button” name="LocationText" value=”Location”>ADD LOCATION</button>
+<input type="text" name="MemberAudio" id="userviacreate" value="{{getName Meteor.userId}}">
+<br>
+<button id="createaudiobutton" type="submit" class="btn btn-success"> PUBLISH </button>
+</form>
+</template>
+
+
+<!-- CREATE EVENT -->
+<!-- CREATE EVENT -->
+<!-- CREATE EVENT -->
+
+<!--
+<template name="CreateEvent">
+  <form>
+<div name = "creator" id="eventCreator" class="music_info_text2"> </div>
+ <input type="text" id="EventTitle" name=”EventTitle placeholder="Add a Title.">
+    <div id="form-group">
+      <input type="text" id="eventLocation" value="" placeholder="Enter Location" class="form-control">
+    </div>
+    <div id="DateandTime">
+    <label for="eventDescription">Begin:</label>
+          <select value="Hour" id="hourSelect" name=""></select> :
+          <select value="Minute" id="minsSelect" name=""></select>
+            <option>AM</option>
+            <option>PM</option>
+    <label for="eventDescription">End:</label>
+    <input type="text" id="createdate" value="Pick a Date">
+    <select value="Hour" id="hourSelect" name=""></select> :
+    <select value="Minute" id="minsSelect" name=""></select>
+      <option>AM</option>
+      <option>PM</option>
+    </div>
+<textarea id="EventText" name=”TextEvent” placeholder=”Add Text..”></textarea>
+<input type="file" accept=[|audio/*|video/*|image/*|] id=”EventMediaFile” name=”AddEventMedia” placeholder="Add Media">
+    <div id="form-group">
+      <textarea id="eventDescription" rows="4" cols="40" class="form-control"></textarea>
+    </div>
+      <div id="form-group">
+  </div>
+      <div id="addtags">
+            <input type="text" id="EventsTags" name="TagsEvent" placeholder="Add a Tag">
+              <button id="btn btn-default" type="button">Add</button>
+          </div>
+          <div id="displaytags">
+          </div>
+        <div id="attendees">
+ </div>
+    <button type="submit" id="btn btn-success">Create Event</button>
+  </form>
+</template>
+-->

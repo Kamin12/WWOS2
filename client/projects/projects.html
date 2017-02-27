@@ -1,0 +1,73 @@
+<!--
+<template name="ProjectStreamHome">
+{{#each project in projectData}}
+{{> StreamProject (projArgs project)}}
+{{/each}}
+</template>
+
+<template name="StreamProject">
+  <nav>
+    <li href='/{{project.Title}}'>About</li>
+    <li href='/{{project.Title}}'>Chat</li>
+    <li href='/{{project.Title}}'>Members</li>
+</nav>
+{{> Template.dynamic template=template}}
+</template>
+
+<template name="AboutProject">
+{{#each projectName in projectNameSmart}}
+{{>AboutProjectRU}}
+{{/each}}
+</template>
+
+
+<template name="AboutProjectRU">
+  {{project.description}}
+</template>
+
+<template name="ProjectChat">
+{{#each projmessage in projmessages}}
+{{>ProjectMessage}}
+{{/each}}
+</template>
+
+<template name="ProjectMembers">
+{{#each member in projectmembers}}
+{{> ProjectMember}}
+{{/each}}
+</template>
+
+<template name="ProjectMember">
+<img src="{{projectmemberimage}}">
+<a> {{project.member}} </a>
+<a> PAY </a>
+</template>
+
+<template name="SendMoney">
+<form>
+To: <a>{{project.member}} </a>
+<input id="amount" placeholder="Amount"/>
+</form>
+</template>
+
+
+<template name="YourProjects">
+{{#each project in yourProjects}}
+{{>Project (projArgs projectTitle)}}
+{{/each}}
+</template>
+
+
+<template name="Project">
+<a id="ProjectName">
+{{project.Title}}
+</a>
+
+<a id="EditProject">
+EDIT
+</a>
+
+<a id="DeleteProject">
+DELETE
+</a>
+-->

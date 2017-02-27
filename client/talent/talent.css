@@ -1,0 +1,223 @@
+/*****************************************************************************/
+
+
+/* Directory: Style */
+
+
+/*****************************************************************************/
+
+
+
+
+#fieldsearch {
+  border-radius: 50px;
+  width: 18%;
+}
+
+
+#posnopp {
+   border-radius: 50px;
+  margin-left: 20em;
+  margin-top: 1em;
+  width: 18%;
+}
+
+#locnopp {
+   border-radius: 50px;
+  width: 18%;
+}
+
+#searchopp {
+  border-radius: 50px;
+}
+
+#posopp:hover {
+ color: black;
+ border-color: black;
+}
+
+#locopp:hover {
+color: black;
+border-color: black;
+}
+
+#searchopp:hover {
+color: black;
+border-color: black;
+}
+
+
+
+
+.directory {
+  background-color: #19222D;
+}
+table, th, td {
+  text-align: center;
+}
+
+/* td {
+    height: 170px;
+} */
+
+table, tr, th, td {
+  border-collapse: collapse;
+}
+.directory_profile_files {
+  display: block;
+  min-height: 230px;
+  margin: 0 auto;
+  text-align: left;
+}
+.directory_profile_files > * {
+  display: inline;
+  height: 200px;
+  width: 200px;
+  margin: 15px 7.5px;
+}
+.directory_profile_files audio, .directory_profile_files video {
+  width: 200px;
+}
+.directory_profile_info {
+  display: block;
+}
+.directory_profile_info .propic {
+  margin-right: 65px;
+}
+.directory_profile_info h2 {
+  color: black;
+  text-align: left;
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.directory_profile_info img {
+  border-radius: 50%;
+  border: thin solid black;
+  margin-left: 25px;
+}
+.directory_profile_info p {
+  text-align: right;
+  width: 200px;
+  margin-right: 100px;
+  margin-top: 10px;
+  color: #737373;
+}
+.directory_tags {
+  height: 50px;
+  background-color: #dae5e8;
+  box-shadow: 0px 0px 24px rgba(188, 188, 188, 1) inset;
+}
+.directory_table td {
+  border: none;
+}
+.sidebar {
+  position: absolute;
+  background-color: black;
+  left: 0px;
+  top: 3.5em;
+  width: 10em;
+  height: 100%;
+  color: white;
+}
+.sidebar .list-group-item {
+  background-color: black;
+  color: white;
+  border-radius: 0px;
+}
+.sidebarContent {
+  position: fixed;
+  width: 10em;
+}
+.main_container {
+  overflow: hidden;
+  position: relative;
+}
+.main_container .tab-content {
+  min-height: 50em;
+}
+.network_main {
+  overflow: auto;
+}
+#book, #subscribe {
+  height: 100px;
+  width: 100px;
+  border: none;
+}
+#invitationtext {
+  width: 250px;
+  height: 100px;
+}
+#browseopp>tr, #browseopp>table, #browsespace>tr, #browsespace>table {
+  width: 100%;
+}
+#browseopp>td, #browsespace>td {
+  width: 33%;
+}
+.carousel-inner {
+  position: relative;
+  width: 100%;
+}
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+  width: 10em;
+  height: 10em;
+  max-height: 10em;
+  margin: auto;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+#network_nav {
+background-color: #0a1427;
+}
+#network_nav .nav-pills > li > a {
+  color: white;
+}
+#network_nav .nav-pills > li.active > a, .cloud-modal .nav-pills > li.active > a:hover {
+  background-color: black;
+}
+#network_nav .nav-pills > li > a:hover {
+  background-color: transparent;
+}
+#searchForm .searchInput {
+  display: inline;
+  float: left;
+  position: absolute;
+  left: 28.4em;
+  top: 59.3em;
+}
+.header {
+  position: relative;
+  width: 100%;
+  background-color: white;
+  height: 55em;
+}
+.header img {
+  width: 100%;
+  height: 50em;
+  display: block;
+}
+#searchForm .suggestions {
+  position: absolute;
+  left: 28.5em;
+  top:61.5em;
+}
+#submitSearch {
+  position: absolute;
+  left: 42em;
+  top: 59.3em;
+  height: 2.3em;
+}
+#fade {
+  height: 75em;
+  width: 100%;
+  position: absolute;
+  bottom:5em;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0+0,0+35,0+66,0.26+78,0.52+87,0.77+92,1+100 */
+  background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 35%, rgba(255,255,255,0) 66%, rgba(255,255,255,0.26) 78%, rgba(255,255,255,0.52) 87%, rgba(255,255,255,0.77) 92%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(35%,rgba(255,255,255,0)), color-stop(66%,rgba(255,255,255,0)), color-stop(78%,rgba(255,255,255,0.26)), color-stop(87%,rgba(255,255,255,0.52)), color-stop(92%,rgba(255,255,255,0.77)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 35%,rgba(255,255,255,0) 66%,rgba(255,255,255,0.26) 78%,rgba(255,255,255,0.52) 87%,rgba(255,255,255,0.77) 92%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 35%,rgba(255,255,255,0) 66%,rgba(255,255,255,0.26) 78%,rgba(255,255,255,0.52) 87%,rgba(255,255,255,0.77) 92%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 35%,rgba(255,255,255,0) 66%,rgba(255,255,255,0.26) 78%,rgba(255,255,255,0.52) 87%,rgba(255,255,255,0.77) 92%,rgba(255,255,255,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 35%,rgba(255,255,255,0) 66%,rgba(255,255,255,0.26) 78%,rgba(255,255,255,0.52) 87%,rgba(255,255,255,0.77) 92%,rgba(255,255,255,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}

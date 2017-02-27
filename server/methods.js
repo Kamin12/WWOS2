@@ -2,6 +2,7 @@ if (Meteor.isServer) {
   var Stripe = StripeAPI(Meteor.settings.private.stripe);
 
 Meteor.methods({
+
 "chargeCard": function(stripeToken) {
 Stripe.charges.create({
         amount: 3800,
@@ -16,24 +17,78 @@ Orders.insert({
      memberDetails
       });
  },
-"addProduct": function (productDetails){
+"createProduct": function (productDetails){
 Products.insert({
      productDetails
    });
-   console.log('ham');
  },
-"addUserRegister": function(userRegistration){
+"addUserRegister": function(memberAccount){
 Meteor.users.update({
-     userRegistration
+     memberAccount
    });
  },
+"addGroup": function( groupDetails ) {
+Groups.insert({
+  groupDetails
+});
+},
+'insertMessageOne': function ( message ) {
+Messagess.insert({
+ message
+ });
+},
+/*
  "userExists": function(username){
             return !!Meteor.users.findOne({username: username});
-        }
- /*
- "uploadUserImage": function(fileObj){
-UserImages.insert({fileObj});
-}
+},
 */
+'createText': function( textdata) {
+	Texts.insert({
+textdata
+	    }, function(error) {
+		console.log(error);
+	});
+},
+"createAudio": function (audiodata ) {
+	Audio.insert({
+audiodata
+	    }, function(error) {
+		console.log(error);
+	});
+},
+
+"createImage": function(imagedata ) {
+	Images.insert({
+imagedata
+
+	    }, function(error) {
+		console.log(error);
+	});
+},
+"createVideo": function(videodata ) {
+Video.insert({
+videodata
+	    }, function(error) {
+		console.log(error);
+	});
+},
+removeFollowing: function(userId) {
+  Meteor.users.update({
+    _Username: Meteor.userId()
+  }, {
+    $pull: {
+      'following': userId
+    }
+  });
+},
+addFollowing: function(userId) {
+  Meteor.users.update({
+    _Username: Meteor.userId()
+  }, {
+    $addToSet: {
+      'following': userId
+    }
+  });
+}
 });
 }

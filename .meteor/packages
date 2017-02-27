@@ -17,17 +17,22 @@ es5-shim                # ECMAScript 5 compatibility for older browsers.
 ecmascript              # Enable ECMAScript2015+ syntax in app code
 
 fortawesome:fontawesome
-kadira:flow-router
-kadira:blaze-layout
 reactive-var
 mrgalaxy:stripe
 okgrow:analytics
-useraccounts:core
 aldeed:template-extension
 accounts-facebook
 arillo:flow-router-helpers
-accounts-password
-useraccounts:unstyled
-useraccounts:flow-routing
 insecure
 zimme:active-route
+kadira:flow-router
+kadira:blaze-layout
+useraccounts:flow-routing
+useraccounts:unstyled
+accounts-password
+aldeed:simple-schema
+aldeed:collection2
+themeteorchef:commonmark
+ostrio:files
+themeteorchef:bert
+reactive-dict

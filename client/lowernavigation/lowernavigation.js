@@ -24,3 +24,18 @@ Template.Register.events ({
     }
 }
   });
+
+  Template.LowerNavigator.events({
+  'click #createicon':function (event, template) {
+  FlowRouter.go('/create');
+  },
+  'click #messages':function (event, template){
+     Blaze.render(Template.MyMessages, document.body);
+  },
+  'click #cloudicon': function(event, template){
+    FlowRouter.go('/cloud');
+  },
+'click #usericon': function(event, template) {
+  Blaze.render(Template.YouMenu, document.body);
+}
+  });

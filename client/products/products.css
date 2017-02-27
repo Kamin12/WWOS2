@@ -1,0 +1,56 @@
+#commentbutton {
+  font-family: "San Francisco Text";
+  padding-left: 5em;
+  padding-right: 5em;
+  right: 0px;
+  margin-left: 39%;
+  float: left;
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  background-color: rgb(71, 88, 75);
+  border: none;
+  font-size: .8em;
+  text-transform: uppercase;
+  letter-spacing: .4em;
+  bottom: 0em;
+  padding-top: 1.1em;
+  padding-bottom: 1.1em;
+}
+
+#lovebutton {
+font-family: "San Francisco Text";
+padding-left: 5em;
+padding-right: 5em;
+right: 0px;
+margin-left: 20%;
+float: left;
+display: inline-block;
+color: rgb(255, 255, 255);
+background-color: rgb(71, 88, 75);
+border: none;
+font-size: .8em;
+text-transform: uppercase;
+letter-spacing: .4em;
+bottom: 0em;
+padding-top: 1.1em;
+padding-bottom: 1.1em;
+}
+
+#sharebutton {
+  font-family: "San Francisco Text";
+  padding-left: 5em;
+  padding-right: 5em;
+  right: 0px;
+  margin-left: 30%;
+  float: left;
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  background-color: rgb(71, 88, 75);
+  border: none;
+  font-size: .8em;
+  text-transform: uppercase;
+  letter-spacing: .4em;
+  bottom: 0em;
+  padding-top: 1.1em;
+  padding-bottom: 1.1em;
+}

@@ -1,0 +1,75 @@
+#messagez {
+  border: 3px solid #000000;
+text-align: center;
+margin-top: 23em;
+font-size: .7em;
+font-family: "San-Francisco";
+letter-spacing: .5em;
+padding-top: 1em;
+font-weight: 600;
+padding-bottom: 1em;
+color: #000000;
+padding-left: 3em;
+padding-right: 3em;
+position: absolute;
+display: '{{messaging}}';
+float: right;
+margin-left: 5%;
+}
+
+#edit {
+  border: 1px solid black;
+z-index: 1000000000000000000000000;
+position: fixed;
+color: black;
+padding-top: .5em;
+padding-bottom: .5em;
+padding-left: 1em;
+padding-right: 1em;
+font-family: "San Francisco Text";
+letter-spacing: 3px;
+border-radius: 5px;
+right: 0px;
+margin-right: 2em;
+margin-top: 1em;
+}
+
+#request {
+
+}
+
+#connect {
+  border: 3px solid #000000;
+  text-align: center;
+  display: '{{connect}}';
+  margin-top: 23em;
+  font-size: .7em;
+  font-family: "San-Francisco";
+  letter-spacing: .5em;
+  padding-top: 1em;
+  font-weight: 600;
+  padding-bottom: 1em;
+  color: #000000;
+  padding-left: 3em;
+  padding-right: 3em;
+  position: absolute;
+  float: right;
+  margin-left: 20%;
+}
+
+#userimagemain {
+  height: 30em;
+  width: 50%;
+  float: left;
+  background-color: black;
+  margin-top: 5%;
+  border: 1px solid white;
+}
+
+#usersitecontainer {
+  background-color: rgb(255, 255, 255);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 100000000;
+}

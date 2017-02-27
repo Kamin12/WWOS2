@@ -1,15 +1,71 @@
 <template name="Users_show_page">
-{{>UserSite}}
+<div id="usersitecontainer">
+<a id="edit"> EDIT </a>
+{{#each memberName in memberNameArray}}
+{{> UserSite (memberArgs memberName)}}
+{{/each}}
+</div>
 </template>
 
 <template name="UserSite">
-<img src={{fileObj}} id="userimagemain">
-<a>{{username}}</a>
-<a>{{location}}</a>
-<button id=""> CONNECT </button>
-<a id="message">
-<p>MESSAGE</p>
-</a>
+  <div id="info">
+<!--
+<img src='{{imageone}}' id="userimagemain">
+<a>{{memberName.Member}}</a>
+<a id="membersitelocation">{{memberName.Location}}</a>
+<a>{{memberName.About}}</a>
+<div id="contact">
+<button id="messagez"> MESSAGE </button>
+<button id="connect" class="{{memberName.connected}}"> CONNECT </button>
+<button id="request" display="{{memberName.request}}"> REQUEST </button>
+{{#if editing}}
+<div id="page">
+<button id="save"> SAVE </button>
+</div>
+{{/if}}
+</div>
+-->
+</div>
+</template>
 
-<a>{{bio}}</a>
+<template name="ProductWebsite">
+{{#each productWeb in productWebs}}
+{{> MembersProduct (productWebArgs productWeb)}}
+{{/each}}
+</template>
+
+<template name="AudioWebsite">
+{{#each productWeb in productWebs}}
+{{> MembersProduct (productWebArgs productWeb)}}
+{{/each}}
+</template>
+
+<template name="TextWebsite">
+{{#each productWeb in productWebs}}
+{{> MembersProduct (productWebArgs productWeb)}}
+{{/each}}
+</template>
+
+<template name="ImageWebsite">
+{{#each productWeb in productWebs}}
+{{> MembersProduct (productWebArgs productWeb)}}
+{{/each}}
+</template>
+
+<template name="VideoWebsite">
+{{#each productWeb in productWebs}}
+{{> MembersProduct (productWebArgs productWeb)}}
+{{/each}}
+</template>
+
+<template name="MembersProduct">
+  <img id="productthumb" href="/{{id}}" src="{{Images}}"/>
+  <div id="sweatshirtinfo">
+    <a href="/{{Member}}" id="account"> {{members}} </a>
+    <a href="/{{id}}" id="title"> {{title}} </a>
+  </div>
+</template>
+
+<template name="Settings">
+<a id="Settings"> Settings </a>
 </template>

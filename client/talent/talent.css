@@ -166,18 +166,11 @@ table, tr, th, td {
   padding-top: 1em;
   padding-bottom: 1em;
 }
+
 #network_nav {
-background-color: #0a1427;
+    background-color: #000000;
 }
-#network_nav .nav-pills > li > a {
-  color: white;
-}
-#network_nav .nav-pills > li.active > a, .cloud-modal .nav-pills > li.active > a:hover {
-  background-color: black;
-}
-#network_nav .nav-pills > li > a:hover {
-  background-color: transparent;
-}
+
 #searchForm .searchInput {
   display: inline;
   float: left;

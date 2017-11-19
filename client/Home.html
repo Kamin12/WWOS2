@@ -245,21 +245,7 @@
   <p id="creatornetwork"> The Creator Network </p>
 </template>
 
-<template name="YouMenu">
-<div class="modal234" id="myyyModal">
-<div class="modal-contentyou">
-  <span class="closeyou"> CLOSE X </span>
-  <div id="youmenu">
-  <a id='site2' href="/:{{currentuser}}"> YOUR SITE </a>
-  <br>
-  <a id='settings2'
-   href="/settings"> SETTINGS </a>
-  <br>
-  <a id='logout2'> LOGOUT </a>
-  </div>
-</div>
-</div>
-</template>
+
 
 <template name="WreadAbout">
   <div class="modal2345" id="myyyModal1">
@@ -286,10 +272,11 @@
 <form name="userregisterform" id="userregisterform">
 <input id="userimage" type="file" name="userimageone">
 <br>
-<input id="enterlocation" type="text" name="userlocationone">
+<input name="Membername" id="SettingsFieldFirstOh" class="membername1" placeholder="Enter Membername">
+<input name="Firstname" class="SettingsFieldOneOh" id="firstname1" placeholder="Enter First Name">
+<input name="Lastname" class="SettingsFieldOneOh" id="lastname1" placeholder="Enter Last Name">
+<input name="Memberbio" id="enterbio" class="memberbio1" type="text">
 <br>
-<input id="enterbio" type="text" name="userbioone">>
-<br>
-<button type="submit" id="userregistrationsubmit"> FINISH </button>
+<button id="userregistrationsubmit"> FINISH </button>
 </form>
 </template>

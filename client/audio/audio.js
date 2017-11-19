@@ -5,6 +5,7 @@ Template.StreamAudio.onCreated( function(){
    });
 });
 
+/*
 Template.StreamAudioReusable.onCreated(function(){
   this.autorun(() => {
     new SimpleSchema({
@@ -12,11 +13,10 @@ Template.StreamAudioReusable.onCreated(function(){
       audiomedia: {type: [Object]},
       audiotitle: {type: String},
       audiotext: {type: String},
-      audiomember: {type: String},
-      audiomembers: {type: String}
+
   }).validate(Template.currentData());
 });
-});
+*/
 
 Template.StreamAudio.helpers({
   audioContext: function(){

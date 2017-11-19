@@ -1,15 +1,12 @@
 if (Meteor.isClient) {
 
-Template.MyMessages.helpers({
+Template.YourMessages.helpers({
   "user": function() {
     return Meteor.userId.username();
-  },
-  'NotLoggedIn': function() {
-    if ( !Meteor.user() & !Meteor.loggingIn()) { return false; } else { return true; }
   }
 });
 
-Template.MyMessages.events({
+Template.YourMessages.events({
   "click .close3": function(event, template) {
     var modal3 = $('#messageswhole');
     modal3.css('display', 'none');
@@ -24,9 +21,12 @@ Template.MyMessages.events({
     var modal3 = $('#messageswhole');
     modal3.css('display', 'none');
     Blaze.remove(template.view);
-  },
+  }
+});
+
+Template.YourMessagesRU.events({
   'click #addmessages': function(event, template){
-  Blaze.render(Template.NewMessage, conversation)
+  Blaze.render(Template.NewMessage, template.$('#conversation').get(0));
   }
 });
 
@@ -204,7 +204,7 @@ Template.YourMessages.helpers({
 
 Template.YourMessages.events({
    'click #newmessage': function (event, template) {
-    Blaze.render(Template.NewMessage, conversation)
+    Blaze.render(Template.NewMessage, t.$('#conversation').get(0));
   },
    'change #fileInput': function(event,template){
      if (e.currentTarget.files && e.currentTarget.files[0]) {

@@ -105,7 +105,7 @@
 
 <template name="LowerNavigator">
 <div id= "network_nav">
-
+  {{#if currentUser}}
     <svg version="1.1"
     	 id="cloudicon" xmlns:cc="http://creativecommons.org/ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000"
@@ -117,14 +117,14 @@
     </svg>
 
   <svg version="1.1" id="createicon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 100 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+	 viewBox="0 200 700 400" enable-background="new 400 50 100 500" xml:space="preserve">
 <path fill="#FFFFFF" stroke="#FFFFFF" stroke-width="10" stroke-miterlimit="10" d="M528.9,463.2c0,6.4,10.3,6.4,10.3,0V358.9h109.1
 	c6.6,0,6.6-9.8,0-9.9H539.2V244.7c0-6.4-10.3-6.4-10.3,0V349H419.8c-6.7,0-6.7,9.9,0,9.9h109.1V463.2z"/>
 <rect x="44" y="736" fill="none" width="1136" height="356"/>
 </svg>
 
-    <svg version="1.1" id="messages" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-    	 viewBox="0 150 500 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+    <svg href="/messages" version="1.1" id="messages" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+    	 viewBox="0 230 900 300" enable-background="new 0 0 1000 1000" xml:space="preserve">
     <path fill="#FFFFFF" stroke="#FFFFFF" stroke-width="14" stroke-miterlimit="10" d="M351.6,350.8l-0.2-2.5l-0.2-2.3l-0.3-2.2l-0.3-2
     	l-0.4-2L350,338l-0.4-1.9l-0.5-1.8l-0.5-1.8l-0.6-1.8l-0.6-1.7l-0.6-1.7l-0.7-1.7l-0.7-1.6l-0.8-1.6l-0.8-1.6l-0.9-1.5l-0.9-1.5
     	l-0.9-1.5l-1-1.4l-1-1.4l-1.1-1.4l-1.1-1.3l-1.1-1.3l-1.2-1.3l-1.2-1.2l-1.3-1.2l-1.3-1.2l-1.3-1.1l-1.4-1.1l-1.4-1.1l-1.4-1.1
@@ -167,8 +167,6 @@
     	c0-0.5-0.1-1.1-0.1-1.6c-0.7-2.1,0-4.6,2.6-5.4c0.8-0.5,1.8-0.8,2.7-0.7c6.6-1.7,13.9-4.7,17.8-10.5c2.6-3.8,5.4-7.8,7.6-12
     	l5.3-21.7L344,344.5z"/>
     </svg>
-
-
    <svg version="1.1"
    	 id="usericon" xmlns:cc="http://creativecommons.org/ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000"
@@ -178,18 +176,16 @@
    		 M500,1392.4c-163.5,0-296,107.5-296,240h592C796,1499.8,663.5,1392.4,500,1392.4z"/>
    </g>
    </svg>
-
+    {{else}}
+   <a id="loginbuttonnav" href="/signin"> LOGIN </a>
+   <a id="signupbuttonnav" href="/join"> SIGN-UP </a>
+    {{/if}}
   </div>
 </template>
 
 
-
-<!--
 <template name="join">
-<p id="joincall2"> Coming Soon. </p>
-<form id="signupform">
-<input type="text" id="joingemail" placeholder="E-Mail">
+  <a id="calltojoin"> Login is Required to Message Members. </a>
 <button id="signup"> SIGN UP </button>
-</form>
+<button id="signup"> LOG IN </button>
 </template>
--->

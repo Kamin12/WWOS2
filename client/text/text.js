@@ -20,7 +20,7 @@ Template.TextItem.helpers({
 pathforTextStream: function (){
   var text = this;
   var params = {
-    ttitle : text.texttitle
+    title : text.texttitle
   };
   var channel = "texts";
   var path = FlowRouter.path(channel, params);

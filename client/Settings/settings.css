@@ -1,9 +1,79 @@
 #Settings {
+  position: absolute;
+  font-family: "San Francisco Text";
+  z-index: 10000000000000;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: .7em;
   margin-top: 5em;
+  color: black;
+  width: 100%;
+  text-align: center;
+}
+
+#SettingsFieldFirst {
+  font-size: 1.5em;
+  width: 30%;
+  border: none;
+  font-weight: 100;
+  letter-spacing: 5px;
+  margin-top: 7em;
+  margin-left: 40%;
+  position: relative;
+}
+
+.SettingsFieldOne {
+  font-size: 1.5em;
+      width: 20%;
+      border: none;
+      font-weight: 100;
+      z-index: 1000000000000000000000;
+      letter-spacing: 5px;
+      margin-top: 1em;
+      margin-left: 40%;
+      position: relative;
+}
+
+.SettingsFieldOneOh {
+  width: 60%;
+    border: none;
+    height: 3em;
+    font-family: "San-Francisco";
+    color: rgba(0, 0, 0, 0.87);
+    letter-spacing: .2em;
+    padding-left: 5%;
+    margin-left: 15%;
+    font-size: 1.4em;
+    font-weight: 300;
+    z-index: 1000000000000000000000000000;
+}
+
+#SettingsFieldFirstOh {
+  width: 60%;
+border: none;
+height: 3em;
+font-family: "San-Francisco";
+color: rgba(0, 0, 0, 0.87);
+letter-spacing: .2em;
+padding-left: inherit;
+margin-left: 20%;
+font-size: 1.4em;
+font-weight: 300;
+z-index: 1000000000000000000000000000;
+}
+
+#updatesettings {
+  width: 100%;
+    z-index: 1000000000000000000000;
+    color: white;
+    background-color: #ffb300;
+    padding-top: 1em;
+    padding-bottom: 1em;
     position: fixed;
+    letter-spacing: 20px;
+    text-align: center;
+    margin-bottom: 3.4em;
+    bottom: 0px;
+    left: 0px;
     font-family: "San Francisco Text";
-    z-index: 10000000000000;
-    font-size: 2em;
-    color: black;
-    float: right;
 }

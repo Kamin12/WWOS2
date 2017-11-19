@@ -1,12 +1,10 @@
 if (Meteor.isClient) {
 Template.Users_show_page.onCreated(function(){
 
-  this.getMemberName = () => FlowRouter.getParam('_id');
-  const instance = Template.instance();
-  const memberName = instance.getMemberName();
+  this.getMemberName = () => FlowRouter.getParam('Membername');
 
   this.autorun(() => {
-  this.subscribe('userdata', memberName);
+  this.subscribe('userdata', {Membername: this.getMemberName()});
 });
 
 
@@ -41,13 +39,13 @@ Template.Users_show_page.events({
  });
 
  Template.Users_show_page.helpers({
- memberNameArray (){
-   const instance = Template.instance();
-  const memberName = instance.getMemberName();
-  return Meteor.users.find(memberName);
+ memberNameArray: function (){
+  var instance = Template.instance();
+  var memberName = instance.getMemberName();
+  return Meteor.users.findOne(memberName);
 },
-memberArgs (memberName){
-  return Meteor.users.find(memberName);
+memberArgs: function (memberName){
+  return Meteor.users.findOne(memberName);
 }
  });
 

@@ -12,13 +12,16 @@
     <a></a>
 </template>
 
-<template name="MyMessages">
+<template name="YourMessages">
 <div id='messageswhole'>
-<span class="close3"> CLOSE X </span>
+<span class="close3"> X </span>
 <a id='messageslabel'> MY MESSAGES </a>
 <div id="conversation" class="conversationn" name="conversation">
 </div>
-{{#if NotLoggedIn}}
+{{#if currentUser}}
+{{>YourMessagesRU}}
+{{else}}
+<div class="modal4" id="messagesModalll">
 <div class="master-navbartwo1"></div>
 <div class="master-navbarthree1"></div>
 <div class="master-navbar"></div>
@@ -27,15 +30,12 @@
 <a id="calltosignup" href="/sign-up"> SIGN UP </a>
 <a id='calltologin' href="/sign-in">SIGN IN </a>
 </div>
-{{else}}
-<div class="modal4" id="messagesModalll">
-{{>YourMessages}}
 </div>
 {{/if}}
 </div>
 </template>
 
-<template name="YourMessages">
+<template name="YourMessagesRU">
 <div id="conversation" class="conversationn" name="conversationn">
 </div>
 {{#each message in messages}}

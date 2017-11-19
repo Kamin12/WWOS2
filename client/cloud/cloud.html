@@ -1,6 +1,11 @@
 
 <template name="Cloud">
+  {{#if NotLoggedIn}}
+  {{>join}}
+  {{else}}
+  <a id='messageslabel'> Cloud</a>
 {{>ProductCloud}}
+{{/if}}
 </template>
 
 
@@ -28,7 +33,7 @@
 </template>
 
 <template name="YourProducts">
-  {{#each product yourproducts}}
+  {{#each product in yourproducts}}
      {{>YourProduct (yourProductArgs product)}}
    {{/each}}
 </template>

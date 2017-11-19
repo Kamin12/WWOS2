@@ -8,24 +8,42 @@
 </template>
 
 <template name="UserSite">
-  <div id="info">
-<!--
-<img src='{{imageone}}' id="userimagemain">
-<a>{{memberName.Member}}</a>
-<a id="membersitelocation">{{memberName.Location}}</a>
-<a>{{memberName.About}}</a>
+<div id="info">
+<img src='' id="userimagemain">
+<a></a>
+<a id="membersitelocation"></a>
+<a></a>
 <div id="contact">
 <button id="messagez"> MESSAGE </button>
-<button id="connect" class="{{memberName.connected}}"> CONNECT </button>
-<button id="request" display="{{memberName.request}}"> REQUEST </button>
-{{#if editing}}
+<button id="connect" class=""> CONNECT </button>
+<button id="request" display=""> REQUEST </button>
 <div id="page">
 <button id="save"> SAVE </button>
 </div>
+</div>
+</div>
+</template>
+
+<template name="YouMenu">
+  {{#if NotLoggedIn}}
+  {{>join}}
+  {{else}}
+<div class="modal234" id="myyyModal">
+<div class="modal-contentyou">
+  <span class="closeyou"> CLOSE X </span>
+  <div id="youmenu">
+  <a class='site3' href="/:Membername"> YOUR SITE </a>
+  <br>
+  <a class='site4' href="/dashbaord"> DASHBOARD </a>
+  <br>
+  <a id='settings2'
+   href="/settings"> SETTINGS </a>
+  <br>
+  <a id='logout2' href=""> LOGOUT </a>
+  </div>
+</div>
+</div>
 {{/if}}
-</div>
--->
-</div>
 </template>
 
 <template name="ProductWebsite">
@@ -64,8 +82,4 @@
     <a href="/{{Member}}" id="account"> {{members}} </a>
     <a href="/{{id}}" id="title"> {{title}} </a>
   </div>
-</template>
-
-<template name="Settings">
-<a id="Settings"> Settings </a>
 </template>

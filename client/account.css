@@ -1,0 +1,22 @@
+#SettingsFieldFirstOh {
+  font-size: 1.5em;
+  width: 30%;
+  border: none;
+  font-weight: 100;
+  letter-spacing: 5px;
+  margin-top: 7em;
+  margin-left: 40%;
+  position: relative;
+}
+
+.SettingsFieldOneOh {
+  font-size: 1.5em;
+      width: 20%;
+      border: none;
+      font-weight: 100;
+      z-index: 1000000000000000000000;
+      letter-spacing: 5px;
+      margin-top: 1em;
+      margin-left: 40%;
+      position: relative;
+}

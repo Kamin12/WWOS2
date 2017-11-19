@@ -1,34 +1,39 @@
 if (Meteor.isClient) {
 
 
-
-Template.CreateNavigator.events({
-'click .close': function(event, template) {
-  Blaze.remove(template.view);
-}
+Template.Create.helpers({
+  'NotLoggedIn': function() {
+    if ( !Meteor.user() & !Meteor.loggingIn()) { return false; } else { return true; }
+  },
+  'FormRendered': function() {
+    return Template.instance().rendered.get();
+  }
 });
 
+Template.CreateNavigator.events({
+
+});
+
+Template.CreateNavigator.onCreated(function(){
+  var renderedtemplate = Session.get('currentForm');
+  var ham = 'template.Create'
+  const completeham = ham.concat(renderedtemplate);
+});
 
 Template.Create.onRendered(function CreatingisCreation(){
+Session.set('rendered', false);
+
   this.formnext = new ReactiveVar('fone');
   this.formback = new ReactiveVar('fone');
   this.errormessagecreate = new ReactiveVar('null');
 });
 
-Template.CreateProduct.onCreated(function(){
-
-this.CreateProductMedia = new ReactiveDict('CreateProductMedia');
-});
-
-
-
-Template.CreateVideo.onCreated(function(){
-
-});
 
 
 Template.CreateVideo.events({
-  'submit #CreateVideo': function(event) {
+  'submit #CreateVideoForm': function(event) {
+    event.preventDefault();
+
 		var instance = Template.instance();
 		var videodata = {
 		 videotitle : event.target.TitleVideo.value,
@@ -53,29 +58,33 @@ Template.CreateVideo.events({
     if (err) {
         alert(err.messsage);
       } else {
-        console.log("wread");
+        Session.set('rendered', false);
     }
   });
   }
-			}
+},
+'click .back': function (event, template){
+  Blaze.remove(Template.instance().view);
+  Session.set('SelectedForm', '+++');
+}
 });
 
 Template.CreateImage.events({
 	'submit #createimage': function(event) {
+    event.preventDefault();
       var instance = Template.instance();
 			var imagedata = {
 				  imagetext : event.target.TextImage.value,
           imagetitle: event.target.TextTitle.value,
           imageimage : event.target.ImageImage.value,
 				  imagemember : event.target.MemberImage.value,
-				  imagemembers : event.target.MembersImage.value,
 				  imagedate : event.target.DateImage.value
 			 },
        pass = true,
        missingElement;
 
          for (var key in imagedata) {
-           if (!memberDetails[key]) {
+           if (!imagedata[key]) {
              pass = false;
              missingElement = key;
              template.errormessagecreate.set('Error: Please Enter'+ missingElement + '!!');
@@ -86,15 +95,20 @@ Template.CreateImage.events({
          if (err) {
              alert(err.messsage);
            } else {
-
+             Session.set('rendered', false);
          }
        }
        );
        }
-				}
+     },
+     'click .back': function (event, template){
+       Blaze.remove(Template.instance().view);
+       Session.set('SelectedForm', '+++');
+     }
 			});
 
 Template.CreateText.onRendered(function createlocationvar(){
+  Session.set('rendered', true);
 var template = Template.instance();
 template.locationamount = new ReactiveVar(false);
 template.collaborators = new ReactiveVar(false);
@@ -102,6 +116,7 @@ template.collaborators = new ReactiveVar(false);
 });
 
 Template.CreateImage.onRendered(function createlocationvar(){
+  Session.set('rendered', true);
 var template = Template.instance();
 template.locationamount = new ReactiveVar(false);
 template.collaborators = new ReactiveVar(false);
@@ -109,6 +124,7 @@ template.collaborators = new ReactiveVar(false);
 });
 
 Template.CreateAudio.onRendered(function createlocationvar(){
+  Session.set('rendered', true);
 var template = Template.instance();
 template.locationamount = new ReactiveVar(false);
 template.collaborators = new ReactiveVar(false);
@@ -116,6 +132,7 @@ template.collaborators = new ReactiveVar(false);
 });
 
 Template.CreateProduct.onRendered(function createlocationvar(){
+  Session.set('rendered', true);
 var template = Template.instance();
 template.locationamount = new ReactiveVar(false);
 template.collaborators = new ReactiveVar(false);
@@ -123,6 +140,7 @@ template.collaborators = new ReactiveVar(false);
 });
 
 Template.CreateVideo.onRendered(function createlocationvar(){
+Session.set('rendered', true);
 var template = Template.instance();
 template.locationamount = new ReactiveVar(false);
 template.collaborators = new ReactiveVar(false);
@@ -132,13 +150,14 @@ template.collaborators = new ReactiveVar(false);
 
 Template.CreateText.events({
 'submit #CreateText': function(event, template) {
+  event.preventDefault();
+
   var instance = Template.instance();
 
 var textdata ={
   texttitle : event.target.TitleText.value,
   texttext : event.target.TextText.value,
   textmember : event.target.MemberText.value,
-  textmembers : event.target.MembersText.value,
   textmedia : event.target.ImageFileText.value,
   textdate : event.target.DateText.value
 },
@@ -157,10 +176,15 @@ if (pass) {
   if (err) {
       alert(err.messsage);
     } else {
+      Session.set('rendered', false);
 
   }
 });
 }
+   },
+   'click .back': function (event, template){
+     Blaze.remove(Template.instance().view);
+     Session.set('SelectedForm', '+++');
    },
    'click #textlocationbutton': function(event, template) {
      template.locationamount.set(true);
@@ -195,37 +219,21 @@ Template.CreateText.helpers({
 
 
 Template.CreateAudio.events({
-  'submit #createaudio': function(event) {
-  var instance = Template.instance();
-  var audiodata ={
-      audiotitle : event.target.TitleAudio.value,
-      audioaudio : event.target.AudioAudio.value,
-      audiotext : event.target.TextAudio.value,
-      audiodate : event.target.DateAudio.value,
-      audiomember : event.target.MemberAudio.value,
-      audiomedia : event.target.MediaAudio.value,
-      audiomembers : event.target.MembersAudio.value
-  },
-  pass = true,
-  missingElement;
+  'submit #createaudio': function(event, template ) {
+    event.preventDefault();
 
-    for (var key in audiodata) {
-      if (!memberDetails[key]) {
-        pass = false;
-        missingElement = key;
-        template.errormessagecreate.set('Error: Please Enter'+ missingElement + '!!');
-      }
-    }
-  if (pass) {
-    Meteor.call('createAudio', audiodata, function (err,response) {
-    if (err) {
-        alert(err.messsage);
-      } else {
-        console.log("wread");
-    }
-  });
-  }
-  }
+  var instance = Template.instance();
+
+const data = {
+  audiotitle : event.target.TitleAudio.value,
+  audiotext : event.target.TextAudio.value
+}
+    Audio.methods.addtext.call(data);
+},
+'click .back': function (event, template){
+  Blaze.remove(Template.instance().view);
+  Session.set('SelectedForm', '+++');
+}
 });
 
 /*
@@ -285,19 +293,16 @@ var requestdata ={
 });
 */
 
-Template.CreateText.onCreated(function(){
-  textMembers = [];
-
+Template.CreateText.onRendered(function(){
+  $( "#createtext" ).slideUp( 3000, "slow");
 });
 
-Template.CreateImage.onCreated(function(){
-  imageMembers = [];
-
+Template.CreateImage.onRendered(function(){
+  $( "#createimage" ).slideUp( 3000, "slow");
 });
 
-Template.CreateAudio.onCreated(function(){
-  audioMembers = [];
-
+Template.CreateAudio.onRendered(function(){
+  $( "#createaudio" ).slideUp( 3000, "slow");
 });
 
 
@@ -310,16 +315,55 @@ Template.Create.helpers({
   }
 });
 
+Template.CreateNavigator.helpers ({
+currentForm: function() {
+  return Session.get('SelectedForm');
+}
+})
+
 Template.Create.onRendered(function() {
+  Session.set('SelectedForm', '+++' );
   Meteor.setTimeout(() => {
     var modal2 = $('.modal3');
     modal2.css('display', 'block');
   }, 500);
 });
 
+Template.Create.events({
+  'click #AudioSelection': function (event, template) {
+    Session.set('SelectedForm', 'Audio' );
+    Blaze.render(Template.CreateAudio, template.$('#createnav').get(0));
+  },
+  'click #TextSelection': function (event, template) {
+    Session.set('SelectedForm','Text' );
+    Blaze.render(Template.CreateText, template.$('#createnav').get(0));
+  },
+  'click #ImageSelection': function (event, template) {
+    Session.set('SelectedForm', 'Image');
+    Blaze.render(Template.CreateImage, template.$('#createnav').get(0));
+  },
+  'click #VideoSelection': function (event, template) {
+    Session.set('SelectedForm', 'Video' );
+    Blaze.render(Template.CreateVideo, template.$('#createnav').get(0));
+  },
+  'click #RequestSelection': function (event, template) {
+    Session.set('SelectedForm', 'Request' );
+    Blaze.render(Template.CreateRequest, template.$('#createnav').get(0));
+  },
+  'click #ProductSelection2': function (event, template) {
+    Session.set('SelectedForm', 'Product' );
+    Blaze.render(Template.CreateProduct,  template.$('#createnav').get(0));
+  },
+  'click .close': function(event, template) {
+    Blaze.remove(Template.instance().view);
+    Session.set('SelectedForm', '+++');
+  }
+});
+
+
 
 Template.CreateProduct.events({
-  'click #shareproduct': function(event, template){
+  'submit .addproduct': function(event, template){
       event.preventDefault();
       var productDetails = {
           productmedia: event.target.MediaProduct.value,
@@ -343,7 +387,7 @@ Template.CreateProduct.events({
         if (err) {
             alert(err.messsage);
           } else {
-            console.log("wread");
+            Session.set('rendered', false);
         }
       });
       }
@@ -364,6 +408,10 @@ Template.CreateProduct.events({
   },
   'click #fthree': function (event) {
     Template.instance().formback.set('ftwo');
+  },
+  'click .back': function (event, template){
+    Blaze.remove(Template.instance().view);
+    Session.set('SelectedForm', '+++');
   }
 });
 
@@ -391,24 +439,10 @@ Template.CreateGroup.events({
   }
 });
 
-Template.CreateNavigator.helpers({
-'currentForm:': function(event, template) {
-  var form = FlowRouter.getRouteName();
-if (form = 'createaudio'){
-  return 'Create Audio';
-} else if(form = 'createvideo') {
-  return 'Create Video';
-} else if( form = 'createproduct') {
-  return 'Create Product';
-} else if( form = 'createimage') {
-  return 'Create Image';
-} else if( form = 'createtext') {
-  return 'Create Text';
-} else if( form="createbooking") {
-  return 'Create Text';
-}
-}
+Template.CreateMenu.helpers({
+  CurrentSelection (event, template) {
+    return Session.get('SelectedForm')
+  }
 });
-
 
 }

@@ -1,8 +1,13 @@
 if (Meteor.isServer) {
 
-  Meteor.publish("userdata", function (memberName) {
-  return Meteor.users.find(memberName);
-  });
+Meteor.publish("userdata", function (Membername) {
+    if (!this.Membername) {
+  return this.ready();
+ }
+ return Meteor.users.find({
+  Membername: this.Membername
+ });
+ });
 
 
 Meteor.publish('sidebar', function(){

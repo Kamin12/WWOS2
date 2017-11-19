@@ -1,24 +1,30 @@
 
 <template name ="Create">
+{{#if currentUser}}
 <div class="modal2" id="myModal">
-<a class="close" href="/home">x</a>
-<a id="ProductSelection"> Create </a>
+{{>CreateNavigator}}
+<a class="close">x</a>
 <ul class="modal-content">
-<a id="ProductSelection2" href="/createproduct"> Product  </a>
-<a id="AudioSelection" href="/createaudio"> Audio </a>
-<a id="VideoSelection" href="/createvideo"> Video </a>
-<a id="TextSelection" href="/createtext"> Text </a>
-<a id="ImageSelection" href="/createimage"> Image </a>
-<a id="RequestSelection" href="/createbooking"> Request </a>
+<a id="ProductSelection2" href=''> Product  </a>
+<a id="AudioSelection" href='' > Audio </a>
+<a id="VideoSelection" href='' > Video </a>
+<a id="TextSelection" href=''> Text </a>
+<a id="ImageSelection" href=''> Image </a>
+<a id="RequestSelection" href=''> Request </a>
 </ul>
 </div>
+{{else}}
+{{>join}}
+{{/if}}
 </template>
+
+
 
 <template name="CreateNavigator">
   <div id="createnav">
-  <a class="back" href="/create"> CREATE MENU </a>
-  <a id="ProductSelection"> {{currentForm}}</a>
-  <a class="close">x</a>
+
+  <a id="ProductSelection"> Create</a>  <a id="PShelper"> {{currentForm}} </a>
+
 </div>
 </template>
 
@@ -45,7 +51,9 @@
 </template>
 
 <template name="CreateProduct">
-  {{> CreateNavigator}}
+  <a class="back" href=""> CREATE MENU </a>
+<div id="addProductdiv1">
+  <div id="addProductdiv2">
     <form class="addProduct">
         <input id="mediaproductt" name="MediaProduct" type="file" placeholder="Upload Media Items"/><br/>
         <br>
@@ -70,6 +78,8 @@
       <img src="{{memberimage}}" />
       <button id="shareproduct" type="submit"> CREATE </button>
     </form>
+  </div>
+</div>
 </template>
 
 <!-- CREATE VIDEO -->
@@ -77,7 +87,7 @@
 <!-- CREATE VIDEO -->
 
 <template name="CreateVideo" >
-  {{> CreateNavigator}}
+<a class="back" href=""> CREATE MENU </a>
 <form id="CreateVideoForm">
 <input name="VideoVideo" type="file"  accept="video/*"  id="VideoFile"  placeholder="Add Video"/>
 <br>
@@ -98,25 +108,23 @@
 <!-- CREATE TEXT -->
 <!-- CREATE TEXT -->
 <template name="CreateText">
-  {{> CreateNavigator}}
+  <a class="back" href=""> CREATE MENU </a>
 <form id="CreateText" method="post">
 <div class="article_container">
 <img id="textcreatordisplay" src=""/>
 <input type="text" id="TextTitle" name="TitleText" placeholder="Add a Title.">
 <br>
 <textarea id="TextText" name="TextText" placeholder="Add Text..."></textarea>
+<br>
 <a id="textlocationbutton" name="LocationText" value=”Location”>ADD LOCATION</a>
-{{#if locationvisual}}
-<a>{{location}}</a><a>x</a>
-{{/if}}
 <button id="createtextbutton" type="submit" class="btn btn-success">PUBLISH</button>
 </div>
 </form>
 </template>
 
 <template name="CreateBooking">
-  {{> CreateNavigator}}
-<form id="CreateText" method="post">
+<a class="back" href=""> CREATE MENU </a>
+<form id="CreateBooking" method="post">
 <div class="article_container">
 <img id="textcreatordisplay" src=""/>
 <a>{{Member}} is inquiring about</a>
@@ -140,8 +148,8 @@
 <!-- CREATE IMAGE -->
 <!-- CREATE IMAGE -->
 <template name="CreateImage">
-  {{> CreateNavigator}}
-<form id=”createimage”>
+  <a class="back" href=""> CREATE MENU </a>
+<form id="createimage">
 <input name="ImageImage" type="file" accept="video/*"  id="ImageFile"  placeholder="Upload Image(s)">
 <br>
 <input name="ImageTitle" type="text" colspan="4"  id="ImageTitle" placeholder="Add Title...">
@@ -159,22 +167,22 @@
 <!-- CREATE AUDIO -->
 <!-- CREATE AUDIO -->
 <template name="CreateAudio">
-{{> CreateNavigator}}
-<form id=”createaudio”>
+  <a class="back" href=""> CREATE MENU </a>
+<form id="createaudio">
 <!-- Audio Title -->
 <input name="TitleAudio" type="text" id="AudioTitle" placeholder="Add a Title">
+<!--
 <div id="music_info_image" style="display:inline-block;">
-<!-- Audio Image -->
-<input name="ImageAudio" placeholder= "Add an Image" id="AudioImage"   type="file" accept="image/*">
-<!-- Audio File -->
+
 <p style="text-align:center;">Click below to add audio files </p>
 <input name="AudioAudio" type="file" accept="audio/*"  id="AudioFile" >
-</div>
+<button id="audiolocationbutton" type=”button” name="LocationText" value=”Location”>ADD LOCATION</button>
+<input type="text" name="MemberAudio" id="userviacreate">
+-->
 <input name="TextAudio" id="AudioText"  placeholder="Add Text">
 <br>
-<button id="audiolocationbutton" type=”button” name="LocationText" value=”Location”>ADD LOCATION</button>
-<input type="text" name="MemberAudio" id="userviacreate" value="{{getName Meteor.userId}}">
-<br>
+
+
 <button id="createaudiobutton" type="submit" class="btn btn-success"> PUBLISH </button>
 </form>
 </template>

@@ -3,27 +3,141 @@ ul > li {
 
 }
 
+#createaudio {
+  background-color: white;
+  margin-top: 5em;}
+
+  .addProduct {
+    background-color: #ffffff;
+    margin-top: 8em;
+    height: 80%;
+    width: 100%;
+    z-index: 100000000000000000000000000000;
+    bottom: 0px;
+  }
+
+  #CreateText {
+    position: fixed;
+        background-color: white;
+        height: 80%;
+        bottom: 0px;
+        width: 100%;
+        position: fixed;
+
+  }
+
+
+  #CreateVideoForm {
+    background-color: white;
+    height: 80%;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    z-index: 1000;
+  }
+
+  #createimage {
+    background-color: white;
+      height: 80%;
+      width: 100%;
+      position: fixed;
+      bottom: 0px;
+      z-index: 1000;
+  }
+
+  #createaudio {
+    background-color: white;
+      height: 80%;
+      width: 100%;
+      position: fixed;
+      bottom: 0px;
+      z-index: 1000;
+  }
+
+  #addProductdiv1 {
+    background-image: background-image: -webkit-gradient( linear, right bottom, left bottom, color-stop(0, #0B917F), color-stop(1, #34396E) );
+  	background-image: -o-linear-gradient(left, #0B917F 0%, #34396E 100%);
+  	background-image: -moz-linear-gradient(left, #0B917F 0%, #34396E 100%);
+  	background-image: -webkit-linear-gradient(left, rgb(1, 18, 35) 30%, rgb(0, 27, 13) 100%);
+  	background-image: -ms-linear-gradient(left, #0B917F 0%, #34396E 100%);
+  	background-image: linear-gradient(to left, #002310 0% #061833 100%);
+    margin-top: 8em;
+    height: 80%;
+    width: 100%;
+    z-index: 100000000000000000000000000000;
+    bottom: 0px;
+  }
+
+  #addProductdiv2 {
+    background-color: #ffffff;
+    background-image: background-image: -webkit-gradient( linear, right bottom, left bottom, color-stop(0, #0B917F), color-stop(1, #34396E) );
+  	background-image: -o-linear-gradient(left, #0B917F 0%, #34396E 100%);
+  	background-image: -moz-linear-gradient(left, #0B917F 0%, #34396E 100%);
+  	background-image: -webkit-linear-gradient(left, rgb(1, 18, 35) 30%, rgb(0, 27, 13) 100%);
+  	background-image: -ms-linear-gradient(left, #0B917F 0%, #34396E 100%);
+  	background-image: linear-gradient(to left, #002310 0% #061833 100%);
+    margin-top: 8em;
+    height: 80%;
+    width: 100%;
+    z-index: 100000000000000000000000000000;
+    bottom: 0px;
+  }
+
+  #CreateVideo {
+    color: rgb(255, 255, 255);
+    left: 0px;
+    background-color: rgb(2, 0, 33);
+    height: 6em;
+      display: inline-block;
+    border: none;
+    padding: 10px 180px 10px 180px;
+    bottom: 0px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    bottom: 1;
+    position: fixed;
+    text-align: center;
+    white-space: nowrap;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    font-family: 'San Francisco Text';
+    letter-spacing: 2.5em;
+    font-weight: 500;
+    width: 100%;
+  }
 
 #createnav {
   position: fixed;
-  background-color: white;
-  height: 3em;
+  position: fixed;
+    background-color: white;
+    height: 3em;
+    width: 100%;
+    z-index: 100000000000000000000000000;
+    background-image: -webkit-linear-gradient(left, rgb(1, 18, 35) 30%, rgb(0, 27, 13) 100%);
   width: 100%;
   z-index: 100000000000000000000000000;
 }
 
 #addsearchmembers {
   border: none;
-height: 3em;
-font-family: "San-Francisco";
-color: rgba(0, 0, 0, 0.87);
-text-align: center;
-font-size: 1.4em;
-padding-left: 5%;
-letter-spacing: .2em;
-margin-top: 1em;
-margin-left: 15%;
-font-weight: 300;
+  height: 3em;
+  width: 30%;
+  font-family: "San-Francisco";
+  color: rgba(0, 0, 0, 0.87);
+  text-align: center;
+  font-size: 1.4em;
+  padding-left: 5%;
+  letter-spacing: .2em;
+  margin-top: 1em;
+  margin-left: 15%;
+  font-weight: 300;
 }
 
 #addmembbutton {
@@ -32,37 +146,35 @@ font-weight: 300;
 
 #AudioSelection {
   font-family: "San Francisco Text";
-      padding-left: 3em;
-      border-top: none;
-      padding-right: 3em;
-      font-size: .8em;
-      margin-top: 12em;
-      border-bottom: none;
-      padding-bottom: 6em;
-      padding-top: 6em;
-      border: 1px solid rgb(134, 134, 134);
-      letter-spacing: .5em;
-      text-transform: uppercase;
-      background-color: black;
-      color: white;
+  padding-left: 3em;
+  border-top: none;
+  padding-right: 3em;
+  font-size: .8em;
+  margin-top: 12em;
+  border-bottom: none;
+  padding-bottom: 11em;
+  padding-top: 6em;
+  letter-spacing: .5em;
+  text-transform: uppercase;
+  background-color: rgba(14, 0, 0, 0.84);
+  color: white;
+  margin: 1em;
 }
 
 #ProductSelection2 {
-	font-family: "San Francisco Text";
-	padding-left: 3em;
-	border-top: none;
-	padding-top: 6em;
-	padding-right: 3em;
-	font-size: .8em;
-	border-bottom: none;
-	border: 1px solid rgb(134, 134, 134);
-	margin-left: 2em;
-	letter-spacing: .5em;
-	padding-bottom: 6em;
-	margin-top: 12em;
-	text-transform: uppercase;
-	background-color: black;
-	color: white;
+  font-family: "San Francisco Text";
+  padding-left: 3em;
+  border-top: none;
+  padding-top: 6em;
+  padding-right: 3em;
+  font-size: .8em;
+  border-bottom: none;
+  letter-spacing: .5em;
+  padding-bottom: 11em;
+  margin-top: 12em;
+  text-transform: uppercase;
+  background-color: rgba(23, 0, 0, 0.68);
+  color: rgb(255, 255, 255);
 }
 
 
@@ -73,14 +185,14 @@ font-weight: 300;
   padding-right: 3em;
   font-size: .8em;
   border-bottom: none;
-  padding-bottom: 6em;
+  padding-bottom: 11em;
   margin-top: 12em;
   padding-top: 6em;
-  border: 1px solid rgb(134, 134, 134);
   letter-spacing: .5em;
   text-transform: uppercase;
-  background-color:black;
+  background-color: rgb(0, 0, 0);
   color: white;
+  margin: 1em;
 }
 
 #VideoSelection {
@@ -90,48 +202,42 @@ font-weight: 300;
   padding-right: 3em;
   font-size: .8em;
   border-bottom: none;
-  padding-bottom: 6em;
+  padding-bottom: 11em;
   margin-top: 12em;
   padding-top: 6em;
-  border: 1px solid rgb(134, 134, 134);
   letter-spacing: .5em;
   text-transform: uppercase;
-background-color: black;
-color: white;
+  background-color: rgba(19, 0, 0, 0.73);
+  color: white;
 }
 
 #ImageSelection {
   font-family: "San Francisco Text";
   padding-left: 3em;
-  border-top: none;
   padding-right: 3em;
   font-size: .8em;
-  border-bottom: none;
   margin-top: 12em;
-  padding-bottom: 6em;
+  padding-bottom: 11em;
   padding-top: 6em;
-  border: 1px solid rgb(134, 134, 134);
   letter-spacing: .5em;
   text-transform: uppercase;
-  background-color:black;
+  background-color: rgba(0, 0, 0, 0.67);
   color: white;
 }
 
 #RequestSelection {
   font-family: "San Francisco Text";
-      padding-left: 3em;
-      border-top: none;
-      padding-right: 3em;
-      font-size: .8em;
-      border-bottom: none;
-      margin-top: 12em;
-      padding-bottom: 6em;
-      padding-top: 6em;
-      border: 1px solid rgb(134, 134, 134);
-      letter-spacing: .5em;
-      text-transform: uppercase;
-      background-color: black;
-      color: white;
+  padding-left: 3em;
+  padding-right: 3em;
+  font-size: .8em;
+  margin-top: 12em;
+  padding-bottom: 11em;
+  padding-top: 6em;
+  letter-spacing: .5em;
+  text-transform: uppercase;
+  background-color: rgba(23, 0, 0, 0.47);
+  color: white;
+  margin: 1em;
 }
 
 
@@ -146,15 +252,14 @@ color: white;
 
 #TextTitle {
   font-family: "Open Sans";
-      color: black;
-      font-size: 1.4em;
-      font-weight: 200;
-      line-height: 40px;
-      margin-top: 6em;
-      text-align: center;
-      margin-left: 21%;
-      border: none;
-      border-radius: 2em;
+  color: black;
+  font-size: 1.4em;
+  font-weight: 200;
+  line-height: 40px;
+  margin-top: 6em;
+  margin-left: 26%;
+  border: none;
+  border-radius: 2em;
 }
 
 #TextText {
@@ -178,14 +283,84 @@ color: white;
  	padding: 0px 0px 0px 14px;
 }
 
+#AudioTitle {
+  font-size: 1.7em;
+    border: none;
+    margin-left: 25%;
+    font-weight: 300;
+    margin-top: .5em;
+}
+
+#AudioText {
+  font-size: 1.7em;
+    border: none;
+    margin-left: 25%;
+    font-weight: 300;
+    margin-top: .5em;
+}
+
+#audiolocationbutton {
+  height: 4em;
+letter-spacing: .5em;
+border: none;
+color: white;
+background-color: black;
+width: 20%;
+margin-left: 25%;
+margin-top: 3em;
+}
+
+#createaudiobutton {
+color: rgb(255, 255, 255);
+left: 0px;
+background-color: rgb(2, 0, 33);
+height: 6em;
+display: inline-block;
+border: none;
+padding: 10px 180px 10px 180px;
+bottom: 0px;
+font-size: 14px;
+font-weight: normal;
+line-height: 1.42857143;
+text-align: center;
+white-space: nowrap;
+-ms-touch-action: manipulation;
+touch-action: manipulation;
+cursor: pointer;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+background-image: none;
+font-family: 'San Francisco Text';
+letter-spacing: 2.5em;
+font-weight: 500;
+display: block;
+width: 100%;
+position: fixed;
+}
+
+#music_info_image {
+  width: 600px;
+height: 100px;
+background-color: black;
+margin-left: 25%;
+margin-top: 6%;
+}
+
+
 #textlocationbutton {
   height: 4em;
   letter-spacing: .5em;
   border: none;
+  padding-left: 4em;
+  padding-right: 4em;
+  font-size: .6em;
   color: white;
   background-color: black;
   width: 20%;
-  margin-left: 26%;
+  font-family: "San Francisco Text";
+  padding: 1em;
 }
 
 #videolocationbutton {
@@ -214,7 +389,8 @@ color: white;
 #createtextbutton {
   color: rgb(255, 255, 255);
   left: 0px;
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(2, 0, 33);
+  height: 6em;
   display: inline-block;
   border: none;
   padding: 10px 180px 10px 180px;
@@ -335,21 +511,7 @@ color: white;
   float: right;
 }
 
-.addProduct {
-  background-color: #ffffff;
-  height: 80%;
-  width: 100%;
-  z-index: 100000000000000;
-  bottom: 0px;
-}
 
-#CreateText {
-  position: fixed;
-      background-color: white;
-      height: 95%;
-      bottom: 0px;
-      width: 100%;
-}
 
 #TextLocation {
     font-family: "San Francisco Text";
@@ -362,43 +524,6 @@ color: white;
     border: none;
 }
 
-#CreateVideoForm {
-  background-color: white;
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  bottom: 0px;
-  z-index: 1000;
-}
-
-#CreateVideo {
-  color: rgb(255, 255, 255);
-  left: 0px;
-  background-color: rgb(0, 0, 0);
-  display: inline-block;
-  border: none;
-  padding: 10px 180px 10px 180px;
-  bottom: 0px;
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 1.42857143;
-  bottom: 1;
-  position: fixed;
-  text-align: center;
-  white-space: nowrap;
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  background-image: none;
-  font-family: 'San Francisco Text';
-  letter-spacing: 2.5em;
-  font-weight: 500;
-  width: 100%;
-}
 
 #videotext {
   color: black;
@@ -432,8 +557,8 @@ margin-left: 25%;
   color: #ffffff;
   display: block;
   left: 0px;
-  background-color: rgb(0, 0, 0);
-  border: none;
+  background-color: rgb(2, 0, 33);
+  height: 6em;  border: none;
   padding: 10px 180px 10px 180px;
   bottom: 0px;
   position: fixed;
@@ -524,32 +649,34 @@ font-size: 1.5em;
 
 #shipment-option-time {
   border: none;
-      height: 3em;
-      font-family: "San-Francisco";
-      color: rgba(0, 0, 0, 0.87);
-      text-align: center;
-      font-size: 1.4em;
-      padding-left: 5%;
-      letter-spacing: .2em;
-      margin-top: 1em;
-      margin-left: 15%;
-      font-weight: 300;
-      z-index: 1000000000000000000000000000;
+  height: 3em;
+  font-family: "San-Francisco";
+  color: rgba(0, 0, 0, 0.87);
+  text-align: center;
+  font-size: 1.4em;
+  padding-left: 5%;
+  letter-spacing: .2em;
+  margin-top: 1em;
+  width: 30%;
+  margin-left: 15%;
+  font-weight: 300;
+  z-index: 1000000000000000000000000000;
 }
 
 #shipment-option-cost {
   border: none;
-      height: 3em;
-      font-family: "San-Francisco";
-      color: rgba(0, 0, 0, 0.87);
-      letter-spacing: .2em;
-      text-align: center;
-      padding-left: 5%;
-      margin-left: 15%;
-      font-size: 1.4em;
-      font-weight: 300;
-      margin-top: 1.2em;
-      z-index: 1000000000000000000000000000;
+  height: 3em;
+  font-family: "San-Francisco";
+  color: rgba(0, 0, 0, 0.87);
+  letter-spacing: .2em;
+  text-align: center;
+  padding-left: 5%;
+  margin-left: 15%;
+  width: 30%;
+  font-size: 1.4em;
+  font-weight: 300;
+  margin-top: 1.2em;
+  z-index: 1000000000000000000000000000;
 }
 
 #mediaproductt {
@@ -564,16 +691,133 @@ font-size: 1.5em;
 
 #ProductSelection {
   font-family: "San-Francisco";
-  background-image: -webkit-linear-gradient(left, rgb(255, 255, 255) 1%, rgb(251, 252, 255) 70%);
-      color: rgba(0, 0, 0, 0.87);
-      display: block;
-      background-color: white;
-      z-index: 100000;
-      text-transform: uppercase;
-      padding-bottom: .8em;
-      margin-top: .6em;
-      text-align: center;
-      width: 100%;
-      font-size: 1.5em;
-      position: fixed;
+  color: rgb(255, 255, 255);
+  z-index: 100000;
+  text-transform: uppercase;
+  padding-bottom: .8em;
+  letter-spacing: 15px;
+  margin-top: 1.5em;
+  margin-left: 35%;
+  width: 100%;
+  font-size: 1em;
+  position: fixed;
+}
+
+#PShelper {
+  font-family: "San-Francisco";
+  color: rgb(255, 255, 255);
+  z-index: 100000;
+  margin-left: 51%;
+  text-transform: uppercase;
+  padding-bottom: .8em;
+  letter-spacing: 15px;
+  margin-top: 1.5em;
+  width: 100%;
+  font-size: 1em;
+  position: fixed;
+}
+
+@media only screen and (max-width: 824px) {
+
+
+#ProductSelection2 {
+  font-family: "San Francisco Text";
+  width: 80%;
+padding-left: 3em;
+border-top: none;
+padding-top: 2em;
+padding-right: 3em;
+font-size: .8em;
+border-bottom: none;
+letter-spacing: .5em;
+padding-bottom: 2em;
+margin-top: 1em;
+text-transform: uppercase;
+background-color: rgba(23, 0, 0, 0.68);
+color: rgb(255, 255, 255);
+}
+
+#AudioSelection {
+  font-family: "San Francisco Text";
+  width: 80%;
+padding-left: 3em;
+border-top: none;
+padding-right: 3em;
+font-size: .8em;
+margin-top: 1em;
+border-bottom: none;
+padding-bottom: 2em;
+padding-top: 2em;
+letter-spacing: .5em;
+text-transform: uppercase;
+background-color: rgba(14, 0, 0, 0.84);
+color: white;
+margin: 1em;
+}
+
+#TextSelection {
+  font-family: "San Francisco Text";
+    width: 80%;
+  padding-left: 3em;
+  padding-right: 3em;
+  font-size: .8em;
+  border: 1px solid rgb(235, 250, 255);
+  margin-top: 1em;
+  padding-bottom: 2em;
+  padding-top: 2em;
+  letter-spacing: .5em;
+  text-transform: uppercase;
+  background-color: rgba(23, 0, 0, 0.83);
+  color: white;
+}
+
+#RequestSelection {
+  font-family: "San Francisco Text";
+  width: 80%;
+
+padding-left: 3em;
+padding-right: 3em;
+font-size: .8em;
+margin-top: 1em;
+padding-bottom: 2em;
+padding-top: 2em;
+letter-spacing: .5em;
+text-transform: uppercase;
+background-color: rgba(23, 0, 0, 0.47);
+color: white;
+margin: 1em;
+}
+
+#ImageSelection {
+  font-family: "San Francisco Text";
+  width: 80%;
+  padding-left: 3em;
+  padding-right: 3em;
+  font-size: .8em;
+  border: 1px solid rgb(235, 250, 255);
+  margin-top: 1em;
+  padding-bottom: 2em;
+  padding-top: 2em;
+  letter-spacing: .5em;
+  text-transform: uppercase;
+  background-color: rgba(23, 0, 0, 0.83);
+  color: white;
+}
+
+#VideoSelection {
+  font-family: "San Francisco Text";
+padding-left: 3em;
+border-top: none;
+width: 80% ;
+padding-right: 3em;
+font-size: .8em;
+border-bottom: none;
+padding-bottom: 2em;
+margin-top: 12em;
+padding-top: 2em;
+letter-spacing: .5em;
+text-transform: uppercase;
+background-color: rgba(19, 0, 0, 0.73);
+color: white;
+}
 }

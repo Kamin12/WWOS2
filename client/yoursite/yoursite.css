@@ -73,3 +73,24 @@ margin-top: 1em;
   position: fixed;
   z-index: 100000000;
 }
+
+.site3 {
+  display: block;
+      color: white;
+      letter-spacing: 5px;
+      padding-top: inherit;
+      text-align: center;
+      width: 100%;
+      margin-bottom: 1em;
+      font-weight: 600;
+}
+
+.site4 {
+  display: block;
+      letter-spacing: 5px;
+      padding-top: inherit;
+      margin-bottom: 1em;
+      text-align: center;
+      width: 100%;
+      font-weight: 600;
+}

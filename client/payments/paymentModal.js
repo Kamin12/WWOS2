@@ -29,18 +29,18 @@ Template.paymentModal.events({
       if (pass) {
         Meteor.call('addCustomerData', memberDetails);
       }
-
     var cardDetails = {
       name: $('#fullname').val(),
       number: $('#cardnumber').val(),
-       cvc: $('#cardcvc').val(),
+      cvc: $('#cardcvc').val(),
       exp_month: $('#cardmonth').val(),
       exp_year: $('#cardyear').val(),
       address_line1: $('#streetaddress1').val(),
-        address_city: $('#city').val(),
-        address_state: $('#state').val(),
-        address_zip: $('#zipcode').val(),
+      address_city: $('#city').val(),
+      address_state: $('#state').val(),
+      address_zip: $('#zipcode').val(),
       },
+
       pass = true,
       missingElement;
 
@@ -102,6 +102,7 @@ Template.paymentModal.onRendered(function() {
   }, 500);
   $("pay").hide()
 });
+
 
 Template.paymentModal.onCreated(function(){
   this.errormessageorder = new ReactiveVar(null);

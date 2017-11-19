@@ -67,30 +67,37 @@ Template.StreamMenu.helpers({
    }
  });
 
-/*
- Template.Register.events({
-   'submit #userregisterform': function(event, template) {
-     event.preventDefault();
+ Template.Register.events ({
+ 'submit #userregisterform':function(event, template){
+event.preventDefault();
 
-     var memberAccount = {
-          "image": event.target.userimageone.value,
-          "location": event.target.userlocationone.value,
-          "bio": event.target.userbioone.value,
-        }
-        Meteor.call('addUserRegister', memberAccount)
- }
+
+    const Membernameon = $('#SettingsFieldFirstOh').val();
+    const Firstnameon =  $('#firstname1').val();
+    const Lastnameon = $('#lastname1').val();
+    const Memberbioon = $('#enterbio').val();
+
+
+Meteor.call('addUserRegister', {Membernameone: Membernameon, Firstnameone: Firstnameon, Lastnameone: Lastnameon, Memberbioone: Memberbioon}, function (err,response) {
+if (err) {
+  alert(err)
+} else {
+console.log('success');
+}
 });
-*/
+}
+});
+
 
 Template.YouMenu.events({
   "click .closeyou" (event, template) {
     var modal3 = $('.modal-content');
     modal3.css('display', 'none');
-    Blaze.remove(template.view);
+    Blaze.remove(Template.instance().view);
   },
   'click #logout2' (event, template){
-         event.preventDefault();
          Meteor.logout();
+         Router.go('/sign-in');
   }
 });
 
@@ -100,6 +107,13 @@ Template.YouMenu.onRendered(function(){
     modal511.css('display', 'block');
   }, 500);
 });
+
+Template.YouMenu.Helpers({
+ NotLoggedIn() {
+    if ( !Meteor.user() & !Meteor.loggingIn()) { return false; } else { return true; }
+ }
+
+})
 
 
 }
